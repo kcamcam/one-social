@@ -23,7 +23,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     # assert_template 'sessions/new'
     post login_path, params: { session: { email:    @user.email,
                                       password: 'password' } }
-    follow_redirect!
+    # follow_redirect!
     # assert_template 'sessions/new'
     # assert_not flash.empty?
     # assert flash.empty?
