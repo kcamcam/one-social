@@ -23,8 +23,10 @@ User.create!(name:  "Example-User",
   name  = Faker::Name.unique.first_name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
+  social2 = SocialMedium.new
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               social_medium: social2)
 end

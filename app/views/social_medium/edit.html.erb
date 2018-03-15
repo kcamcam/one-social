@@ -1,5 +1,4 @@
 <%= @user.name %>, <%= @user.email %>
-<h1><%= @social.github %></h1>
 <p>Github: <%= @user.social_medium.github %> | Delete</p>
 
 
@@ -7,23 +6,19 @@
   <%= render 'shared/error_messages' %>
   <%= f.label :github  %>
   <%= f.text_field :github, class: 'form-control' %>
+  <br />
+  <%= f.label :twitter  %>
+  <%= f.text_field :twitter, class: 'form-control' %>
+  <br />
+  <%= f.label :instagram  %>
+  <%= f.text_field :instagram, class: 'form-control' %>
+  <br />
+  <%= f.label :youtube  %>
+  <%= f.text_field :youtube, class: 'form-control' %>
+  <br />
+  <%= f.label :facebook  %>
+  <%= f.text_field :facebook, class: 'form-control' %>
+  <br />
   <%= f.submit "Save changes", class: "btn btn-primary" %>
-<% end %>
-<br /><br /><br /><br /><br /><br />
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages' %>
 
-  <%= f.label :name  %>
-  <%= f.text_field :name, class: 'form-control' %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control' %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control' %>
-
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-  <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>

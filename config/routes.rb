@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'users/new'
 
-
   resources :users
   resources :social_medium
 end

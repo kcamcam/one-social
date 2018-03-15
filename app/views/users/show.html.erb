@@ -1,29 +1,8 @@
-<%= @user.name %>, <%= @user.email %>
-<h1><%= @social.github %></h1>
+<p><%= @user.name %>, <%= @user.email %></p>
 <p>Github: <%= @user.social_medium.github %> | Delete</p>
-
-
-<%= form_for(@social) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.label :github  %>
-  <%= f.text_field :github, class: 'form-control' %>
-  <%= f.submit "Save changes", class: "btn btn-primary" %>
-<% end %>
-<br /><br /><br /><br /><br /><br />
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages' %>
-
-  <%= f.label :name  %>
-  <%= f.text_field :name, class: 'form-control' %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control' %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control' %>
-
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-  <%= f.submit "Save changes", class: "btn btn-primary" %>
-<% end %>
+<p>Twitter: <%= @user.social_medium.twitter %> | Delete</p>
+<p>Instagram: <%= @user.social_medium.instagram %> | Delete</p>
+<p>Youtube: <%= @user.social_medium.youtube %> | Delete</p>
+<p>Facebook: <%= @user.social_medium.facebook %> | Delete</p>
+<%= link_to 'edit', edit_social_medium_url %>
+<!-- edit_social_medium_url -->
