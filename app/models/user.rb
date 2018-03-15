@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_one :social_medium
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   VALID_NAME_REGEX = /\A[a-z0-9\-_]+\z/i #letters,numbers,dashes,underscores

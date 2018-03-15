@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  twitter: MyString
+  github: MyString
+  instagram: MyString
+  youtube: MyString
+  facebook: MyString
+
+two:
+  twitter: MyString
+  github: MyString
+  instagram: MyString
+  youtube: MyString
+  facebook: MyString
