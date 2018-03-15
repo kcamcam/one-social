@@ -1,4 +1,13 @@
 class User < ApplicationRecord
+	# Search implemented using
+	# https://rubyplus.com/articles/4971-Search-Feature-using-Postgres-9-6-2-and-Rails-5-1
+	include PgSearch
+	pg_search_scope :search_by_full_name, against: [:name],
+							    using: {
+							      tsearch: {
+							        prefix: true
+							      }
+							    }
 	has_one :social_medium
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
