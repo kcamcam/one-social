@@ -5,11 +5,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    # @social = @user.social_medium
   end
 
   def show
     # @user = User.find(params[:id])
     @user = User.find_by_name(params[:id]) #find by username instead
+    @social = @user.social_medium
   end
 
   def new
@@ -19,6 +21,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      social = SocialMedium.new # create a blank instance of Social Media for this user
+      @user.social_medium = social # create the relation
       log_in @user
       flash[:success] = "Welcome to oneSocial!"
       redirect_to user_path(@user.name)
@@ -33,6 +37,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    @social = @user.social_medium
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to user_path(@user.name)
