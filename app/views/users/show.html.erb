@@ -1,8 +1,86 @@
-<p><%= @user.name %>, <%= @user.email %></p>
-<p>Github: <%= @user.social_medium.github %> | Delete</p>
-<p>Twitter: <%= @user.social_medium.twitter %> | Delete</p>
-<p>Instagram: <%= @user.social_medium.instagram %> | Delete</p>
-<p>Youtube: <%= @user.social_medium.youtube %> | Delete</p>
-<p>Facebook: <%= @user.social_medium.facebook %> | Delete</p>
-<%= link_to 'edit', edit_social_medium_url %>
-<!-- edit_social_medium_url -->
+<!-- Twtitter -->
+<% if @user.social_medium.twitter != "" %>
+  <%= form_for(@social) do |f| %>
+    <%= f.submit "X",
+      data: { confirm: 'Are you sure you want to delete',
+              'confirm-button-text': 'Im ready',
+              'cancel-button-text': 'No way',
+              'confirm-button-color': '#a5d6a7',
+              'cancel-button-color': '#e57373',
+              'sweet-alert-type': 'error',
+              text: "@#{@user.social_medium.twitter}"}
+    %>
+    <%= f.label "#{:twitter} @#{@user.social_medium.twitter}" %>
+    <%= f.text_field :twitter, style: 'display: none;', value: '' %>
+  <% end %>
+<% end %>
+
+<!-- Github -->
+<% if @user.social_medium.github != "" %>
+  <%= form_for(@social) do |f| %>
+    <%= f.submit "X",
+      data: { confirm: 'Are you sure you want to delete',
+              'confirm-button-text': 'Im ready',
+              'cancel-button-text': 'No way',
+              'confirm-button-color': '#a5d6a7',
+              'cancel-button-color': '#e57373',
+              'sweet-alert-type': 'error',
+              text: "@#{@user.social_medium.github}"}
+    %>
+    <%= f.label "#{:github} @#{@user.social_medium.github}" %>
+    <%= f.text_field :github, style: 'display: none;', value: '' %>
+  <% end %>
+<% end %>
+
+<!-- Instagram -->
+<% if @user.social_medium.instagram != "" %>
+  <%= form_for(@social) do |f| %>
+    <%= f.submit "X",
+      data: { confirm: 'Are you sure you want to delete',
+              'confirm-button-text': 'Im ready',
+              'cancel-button-text': 'No way',
+              'confirm-button-color': '#a5d6a7',
+              'cancel-button-color': '#e57373',
+              'sweet-alert-type': 'error',
+              text: "@#{@user.social_medium.instagram}"}
+    %>
+    <%= f.label "#{:instagram} @#{@user.social_medium.instagram}" %>
+    <%= f.text_field :instagram, style: 'display: none;', value: '' %>
+  <% end %>
+<% end %>
+
+<!-- Youtube -->
+<% if @user.social_medium.youtube != "" %>
+  <%= form_for(@social) do |f| %>
+    <%= f.submit "X",
+      data: { confirm: 'Are you sure you want to delete',
+              'confirm-button-text': 'Im ready',
+              'cancel-button-text': 'No way',
+              'confirm-button-color': '#a5d6a7',
+              'cancel-button-color': '#e57373',
+              'sweet-alert-type': 'error',
+              text: "@#{@user.social_medium.youtube}"}
+    %>
+    <%= f.label "#{:youtube} @#{@user.social_medium.youtube}" %>
+    <%= f.text_field :youtube, style: 'display: none;', value: '' %>
+  <% end %>
+<% end %>
+
+<!-- Facebook -->
+<% if @user.social_medium.facebook != "" %>
+  <%= form_for(@social) do |f| %>
+    <%= f.submit "X",
+      data: { confirm: 'Are you sure you want to delete',
+              'confirm-button-text': 'Im ready',
+              'cancel-button-text': 'No way',
+              'confirm-button-color': '#a5d6a7',
+              'cancel-button-color': '#e57373',
+              'sweet-alert-type': 'error',
+              text: "@#{@user.social_medium.facebook}"}
+    %>
+    <%= f.label "#{:facebook} @#{@user.social_medium.facebook}" %>
+    <%= f.text_field :facebook, style: 'display: none;', value: '' %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Add new', edit_social_medium_url %>

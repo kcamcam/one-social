@@ -1,6 +1,4 @@
 <%= @user.name %>, <%= @user.email %>
-<p>Github: <%= @user.social_medium.github %> | Delete</p>
-
 
 <%= form_for(@social) do |f| %>
   <%= render 'shared/error_messages' %>

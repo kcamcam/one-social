@@ -34,7 +34,13 @@ gem 'faker',          '1.7.3'
 # Pagination shiz
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+# Postgres Search
 gem 'pg_search'
+# Toby wanted some jquery
+gem 'jquery-rails'
+# Sweet Alert 2
+gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
+gem 'sweet-alert2-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
