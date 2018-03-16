@@ -21772,3 +21772,122 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-16 03:27:06 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (24.7ms)
+Completed 200 OK in 208ms (Views: 195.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/Example-User" for 127.0.0.1 at 2018-03-16 03:27:08 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.4ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (363.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 426ms (Views: 389.4ms | ActiveRecord: 10.1ms)
+
+
+Started PATCH "/social_medium/1" for 127.0.0.1 at 2018-03-16 03:27:12 -0400
+Processing by SocialMediumController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zkGfeHk/c37QWJZSgSo80wo67lChcatQSWZQ2YHwgrIgDVqugekKvdTMhIxXDFYF7WD6jwvnw80Kx5LWykWGEg==", "social_medium"=>{"instagram"=>""}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSocialMedium Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE "social_media"."user_id" = $1 AND ("social_media"."id" != $2) LIMIT $3[0m  [["user_id", "1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE LOWER("social_media"."twitter") = LOWER($1) AND ("social_media"."id" != $2) LIMIT $3[0m  [["twitter", "kcamel"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE LOWER("social_media"."github") = LOWER($1) AND ("social_media"."id" != $2) LIMIT $3[0m  [["github", "kcamel"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "social_media" SET "instagram" = $1, "updated_at" = $2 WHERE "social_media"."id" = $3[0m  [["instagram", ""], ["updated_at", "2018-03-16 07:27:12.615223"], ["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/Example-User
+Completed 302 Found in 17ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/users/Example-User" for 127.0.0.1 at 2018-03-16 03:27:12 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/social_medium/Example-User/edit" for 127.0.0.1 at 2018-03-16 03:28:53 -0400
+Processing by SocialMediumController#edit as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering social_medium/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered social_medium/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/social_medium/1" for 127.0.0.1 at 2018-03-16 03:28:57 -0400
+Processing by SocialMediumController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CodbNKdkTdnsas4DchU+ZGpTHu+Zeq30fJBDlAaEKJvky57iX7I0Guj+3N2kM1SyjQkKMDPsxWk/MYGbTTEsOw==", "social_medium"=>{"github"=>"kcamel", "twitter"=>"kcamel", "instagram"=>"example", "youtube"=>"", "facebook"=>""}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.3ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSocialMedium Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE "social_media"."user_id" = $1 AND ("social_media"."id" != $2) LIMIT $3[0m  [["user_id", "1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE LOWER("social_media"."twitter") = LOWER($1) AND ("social_media"."id" != $2) LIMIT $3[0m  [["twitter", "kcamel"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE LOWER("social_media"."github") = LOWER($1) AND ("social_media"."id" != $2) LIMIT $3[0m  [["github", "kcamel"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mSocialMedium Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "social_media" WHERE LOWER("social_media"."instagram") = LOWER($1) AND ("social_media"."id" != $2) LIMIT $3[0m  [["instagram", "example"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "social_media" SET "instagram" = $1, "updated_at" = $2 WHERE "social_media"."id" = $3[0m  [["instagram", "example"], ["updated_at", "2018-03-16 07:28:57.631575"], ["id", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/Example-User
+Completed 302 Found in 14ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/Example-User" for 127.0.0.1 at 2018-03-16 03:28:57 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 03:37:58 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/Example-User" for 127.0.0.1 at 2018-03-16 03:38:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
