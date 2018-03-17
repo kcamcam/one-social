@@ -21996,3 +21996,41 @@ Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.5ms)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7705748170388709525)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/Example-User" for 127.0.0.1 at 2018-03-17 02:04:41 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.3ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (339.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 609ms (Views: 562.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users/Example-User" for 127.0.0.1 at 2018-03-17 02:12:05 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.3ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (344.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 707ms (Views: 658.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/Example-User" for 127.0.0.1 at 2018-03-17 02:12:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Example-User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Example-User"], ["LIMIT", 1]]
+  [1m[36mSocialMedium Load (0.2ms)[0m  [1m[34mSELECT  "social_media".* FROM "social_media" WHERE "social_media"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
