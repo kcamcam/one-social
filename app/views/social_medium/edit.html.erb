@@ -2,21 +2,35 @@
 
 <%= form_for(@social) do |f| %>
   <%= render 'shared/error_messages' %>
-  <%= f.label :github  %>
-  <%= f.text_field :github, class: 'form-control' %>
-  <br />
-  <%= f.label :twitter  %>
-  <%= f.text_field :twitter, class: 'form-control' %>
-  <br />
-  <%= f.label :instagram  %>
-  <%= f.text_field :instagram, class: 'form-control' %>
-  <br />
-  <%= f.label :youtube  %>
-  <%= f.text_field :youtube, class: 'form-control' %>
-  <br />
-  <%= f.label :facebook  %>
-  <%= f.text_field :facebook, class: 'form-control' %>
-  <br />
-  <%= f.submit "Save changes", class: "btn btn-primary" %>
+  <% if !@social.github? %>
+    <%= f.label :github  %>
+    <%= f.text_field :github, class: 'form-control' %>
+    <br />
+  <% end %>
 
+  <% if !@social.twitter? %>
+    <%= f.label :twitter  %>
+    <%= f.text_field :twitter, class: 'form-control' %>
+    <br />
+  <% end %>
+
+  <% if !@social.instagram? %>
+    <%= f.label :instagram  %>
+    <%= f.text_field :instagram, class: 'form-control' %>
+    <br />
+  <% end %>
+
+  <% if !@social.youtube? %>
+    <%= f.label :youtube  %>
+    <%= f.text_field :youtube, class: 'form-control' %>
+    <br />
+  <% end %>
+  <% if !@social.facebook? %>
+    <%= f.label :facebook  %>
+    <%= f.text_field :facebook, class: 'form-control' %>
+    <br />
+  <% end %>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+  <%= link_to "Back", "/#{current_user.name}" %>
 <% end %>

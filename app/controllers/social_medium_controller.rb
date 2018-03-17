@@ -17,7 +17,6 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    # @user = User.find_by_id((SocialMedium.find_by_id(params[:id])).user_id)
   end
 
   def update
