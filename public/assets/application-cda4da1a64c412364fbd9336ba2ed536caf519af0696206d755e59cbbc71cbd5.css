@@ -1,0 +1,1767 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+/* line 25, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+body.swal2-in {
+  overflow-y: hidden;
+}
+
+/* line 30, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1060;
+}
+/* line 42, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-container:not(.in) {
+  pointer-events: none;
+}
+/* line 47, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-container.fade {
+  transition: background-color .1s;
+}
+/* line 51, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-container.in {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 58, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal {
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  position: relative;
+}
+/* line 70, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal:focus {
+  outline: none;
+}
+/* line 74, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal.loading {
+  overflow-y: hidden;
+}
+/* line 78, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal h2 {
+  color: #595959;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  display: block;
+}
+/* line 91, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-spacer {
+  height: 10px;
+  color: transparent;
+  border: 0;
+}
+/* line 97, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .styled {
+  border: 0;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 5px;
+  padding: 10px 32px;
+}
+/* line 109, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .styled:not(.loading)[disabled] {
+  opacity: .4;
+  cursor: no-drop;
+}
+/* line 115, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .styled.loading {
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: -2px 30px;
+  vertical-align: top;
+  background-color: transparent !important;
+  color: transparent;
+  cursor: default;
+  border-radius: 100%;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+}
+/* line 134, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal :not(.styled).loading::after {
+  display: inline-block;
+  content: '';
+  margin-left: 5px;
+  vertical-align: -1px;
+  height: 6px;
+  width: 6px;
+  border: 3px solid #999999;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+}
+/* line 149, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-image {
+  margin: 20px auto;
+  max-width: 100%;
+}
+/* line 154, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-close {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: serif;
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  cursor: pointer;
+  color: #cccccc;
+  transition: color .1s ease;
+}
+/* line 165, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-close:hover {
+  color: #d55;
+}
+/* line 170, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal > .swal2-input,
+.swal2-modal > .swal2-file,
+.swal2-modal > .swal2-textarea,
+.swal2-modal > .swal2-select,
+.swal2-modal > .swal2-radio,
+.swal2-modal > .swal2-checkbox {
+  display: none;
+}
+/* line 179, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  float: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: #545454;
+}
+/* line 191, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input,
+.swal2-modal .swal2-file,
+.swal2-modal .swal2-textarea,
+.swal2-modal .swal2-select,
+.swal2-modal .swal2-radio,
+.swal2-modal .swal2-checkbox {
+  margin: 20px auto;
+}
+/* line 200, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input,
+.swal2-modal .swal2-file,
+.swal2-modal .swal2-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  font-size: 18px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+  transition: border-color box-shadow .3s;
+}
+/* line 211, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input.error,
+.swal2-modal .swal2-file.error,
+.swal2-modal .swal2-textarea.error {
+  border-color: #f06e57;
+}
+/* line 215, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input:focus,
+.swal2-modal .swal2-file:focus,
+.swal2-modal .swal2-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 3px #c4e6f5;
+  border: 1px solid #b4dbed;
+}
+/* line 220, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input:focus::placeholder,
+.swal2-modal .swal2-file:focus::placeholder,
+.swal2-modal .swal2-textarea:focus::placeholder {
+  transition: opacity .3s .03s ease;
+  opacity: .8;
+}
+/* line 226, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input::placeholder,
+.swal2-modal .swal2-file::placeholder,
+.swal2-modal .swal2-textarea::placeholder {
+  color: #e6e6e6;
+}
+/* line 232, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-range input {
+  float: left;
+  width: 80%;
+}
+/* line 237, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-range output {
+  float: right;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+/* line 245, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-range input,
+.swal2-modal .swal2-range output {
+  height: 43px;
+  line-height: 43px;
+  vertical-align: middle;
+  margin: 20px auto;
+  padding: 0;
+}
+/* line 255, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input {
+  height: 43px;
+  padding: 0 12px;
+}
+/* line 259, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-input[type='number'] {
+  max-width: 150px;
+}
+/* line 264, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-file {
+  font-size: 20px;
+}
+/* line 268, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-textarea {
+  height: 108px;
+  padding: 12px;
+}
+/* line 273, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-select {
+  color: #545454;
+  font-size: inherit;
+  padding: 5px 10px;
+  min-width: 40%;
+  max-width: 100%;
+}
+/* line 281, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-radio {
+  border: 0;
+}
+/* line 285, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-radio label:not(:first-child) {
+  margin-left: 20px;
+}
+/* line 290, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-radio input,
+.swal2-modal .swal2-radio span {
+  vertical-align: middle;
+}
+/* line 295, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-radio input {
+  margin: 0 3px 0 0;
+}
+/* line 300, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-checkbox {
+  color: #545454;
+}
+/* line 303, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-checkbox input,
+.swal2-modal .swal2-checkbox span {
+  vertical-align: middle;
+}
+/* line 309, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-validationerror {
+  background-color: #f0f0f0;
+  margin: 0 -20px;
+  overflow: hidden;
+  padding: 10px;
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  display: none;
+}
+/* line 319, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-modal .swal2-validationerror::before {
+  content: '!';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ea7d7d;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+@supports (-ms-accelerator: true) {
+  /* line 336, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+  .swal2-range input {
+    width: 100% !important;
+  }
+  /* line 340, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+  .swal2-range output {
+    display: none;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 348, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+  .swal2-range input {
+    width: 100% !important;
+  }
+  /* line 352, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+  .swal2-range output {
+    display: none;
+  }
+}
+/* line 358, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+  cursor: default;
+  user-select: none;
+}
+/* line 370, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-error {
+  border-color: #f27474;
+}
+/* line 373, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-error .x-mark {
+  position: relative;
+  display: block;
+}
+/* line 378, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-error .line {
+  position: absolute;
+  height: 5px;
+  width: 47px;
+  background-color: #f27474;
+  display: block;
+  top: 37px;
+  border-radius: 2px;
+}
+/* line 387, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-error .line.left {
+  transform: rotate(45deg);
+  left: 17px;
+}
+/* line 392, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-error .line.right {
+  transform: rotate(-45deg);
+  right: 16px;
+}
+/* line 399, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-warning {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #f8bb86;
+  border-color: #facea8;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+/* line 408, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-info {
+  font-family: 'Open Sans', sans-serif;
+  color: #3fc3ee;
+  border-color: #9de0f6;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+/* line 417, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-question {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #87adbd;
+  border-color: #c9dae1;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+/* line 426, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success {
+  border-color: #a5dc86;
+}
+/* line 429, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success::before, .swal2-icon.swal2-success::after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+/* line 440, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success::before {
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  transform: rotate(-45deg);
+  transform-origin: 60px 60px;
+}
+/* line 449, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success::after {
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  transform: rotate(-45deg);
+  transform-origin: 0 60px;
+}
+/* line 458, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success .placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(165, 220, 134, 0.2);
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+/* line 471, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success .fix {
+  width: 7px;
+  height: 90px;
+  background-color: #fff;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+/* line 484, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+/* line 493, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success .line.tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  transform: rotate(45deg);
+}
+/* line 502, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-icon.swal2-success .line.long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  transform: rotate(-45deg);
+}
+
+/* line 514, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps {
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0;
+}
+/* line 522, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps li {
+  display: inline-block;
+  position: relative;
+}
+/* line 527, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle {
+  background: #3085d6;
+  border-radius: 2em;
+  color: #fff;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  z-index: 20;
+}
+/* line 537, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle:first-child {
+  margin-left: 0;
+}
+/* line 541, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle:last-child {
+  margin-right: 0;
+}
+/* line 545, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+  background: #3085d6;
+}
+/* line 548, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+  background: #add8e6;
+}
+/* line 552, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+  background: #add8e6;
+}
+/* line 558, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-progresssteps .swal2-progressline {
+  background: #3085d6;
+  height: .4em;
+  margin: 0 -1px;
+  z-index: 10;
+}
+
+/* line 568, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+[class^='swal2'] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+/* line 617, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.show-swal2 {
+  animation: showSweetAlert 0.3s;
+}
+/* line 620, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.show-swal2.no-animation {
+  animation: none;
+}
+
+/* line 625, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.hide-swal2 {
+  animation: hideSweetAlert 0.15s forwards;
+}
+/* line 628, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.hide-swal2.no-animation {
+  animation: none;
+}
+
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+@keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+/* line 713, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.animate-success-tip {
+  animation: animate-success-tip 0.75s;
+}
+
+/* line 717, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.animate-success-long {
+  animation: animate-success-long 0.75s;
+}
+
+/* line 723, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.swal2-success.animate::after {
+  animation: rotatePlaceholder 4.25s ease-in;
+}
+
+@keyframes animate-error-icon {
+  0% {
+    transform: rotateX(100deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+/* line 744, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.animate-error-icon {
+  animation: animate-error-icon 0.5s;
+}
+
+@keyframes animate-x-mark {
+  0% {
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.15);
+    margin-top: -6px;
+  }
+  100% {
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+/* line 773, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.animate-x-mark {
+  animation: animate-x-mark 0.5s;
+}
+
+@keyframes pulse-warning {
+  0% {
+    border-color: #f8d486;
+  }
+  100% {
+    border-color: #f8bb86;
+  }
+}
+/* line 787, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/src/sweetalert2.scss */
+.pulse-warning {
+  animation: pulse-warning 0.75s infinite alternate;
+}
+
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 1, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+body.swal2-in {
+  overflow-y: hidden;
+}
+
+/* line 4, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1060;
+}
+
+/* line 19, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-container:not(.in) {
+  pointer-events: none;
+}
+
+/* line 21, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-container.fade {
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+/* line 24, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-container.in {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 27, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal {
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  position: relative;
+}
+
+/* line 38, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal:focus {
+  outline: none;
+}
+
+/* line 40, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal.loading {
+  overflow-y: hidden;
+}
+
+/* line 42, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal h2 {
+  color: #595959;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  display: block;
+}
+
+/* line 53, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-spacer {
+  height: 10px;
+  color: transparent;
+  border: 0;
+}
+
+/* line 57, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .styled {
+  border: 0;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 5px;
+  padding: 10px 32px;
+}
+
+/* line 67, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .styled:not(.loading)[disabled] {
+  opacity: .4;
+  cursor: no-drop;
+}
+
+/* line 70, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .styled.loading {
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: -2px 30px;
+  vertical-align: top;
+  background-color: transparent !important;
+  color: transparent;
+  cursor: default;
+  border-radius: 100%;
+  -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+}
+
+/* line 85, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal :not(.styled).loading::after {
+  display: inline-block;
+  content: '';
+  margin-left: 5px;
+  vertical-align: -1px;
+  height: 6px;
+  width: 6px;
+  border: 3px solid #999999;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+}
+
+/* line 97, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-image {
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+/* line 100, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-close {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: serif;
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  cursor: pointer;
+  color: #cccccc;
+  -webkit-transition: color .1s ease;
+  transition: color .1s ease;
+}
+
+/* line 111, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-close:hover {
+  color: #d55;
+}
+
+/* line 113, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal > .swal2-input,
+.swal2-modal > .swal2-file,
+.swal2-modal > .swal2-textarea,
+.swal2-modal > .swal2-select,
+.swal2-modal > .swal2-radio,
+.swal2-modal > .swal2-checkbox {
+  display: none;
+}
+
+/* line 120, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  float: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: #545454;
+}
+
+/* line 130, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input,
+.swal2-modal .swal2-file,
+.swal2-modal .swal2-textarea,
+.swal2-modal .swal2-select,
+.swal2-modal .swal2-radio,
+.swal2-modal .swal2-checkbox {
+  margin: 20px auto;
+}
+
+/* line 137, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input,
+.swal2-modal .swal2-file,
+.swal2-modal .swal2-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  font-size: 18px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+  -webkit-transition: border-color box-shadow .3s;
+  transition: border-color box-shadow .3s;
+}
+
+/* line 148, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input.error,
+.swal2-modal .swal2-file.error,
+.swal2-modal .swal2-textarea.error {
+  border-color: #f06e57;
+}
+
+/* line 152, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:focus,
+.swal2-modal .swal2-file:focus,
+.swal2-modal .swal2-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 3px #c4e6f5;
+  border: 1px solid #b4dbed;
+}
+
+/* line 158, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:focus::-webkit-input-placeholder,
+.swal2-modal .swal2-file:focus::-webkit-input-placeholder,
+.swal2-modal .swal2-textarea:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8;
+}
+
+/* line 164, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:focus::-moz-placeholder,
+.swal2-modal .swal2-file:focus::-moz-placeholder,
+.swal2-modal .swal2-textarea:focus::-moz-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8;
+}
+
+/* line 170, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:focus:-ms-input-placeholder,
+.swal2-modal .swal2-file:focus:-ms-input-placeholder,
+.swal2-modal .swal2-textarea:focus:-ms-input-placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8;
+}
+
+/* line 176, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:focus::placeholder,
+.swal2-modal .swal2-file:focus::placeholder,
+.swal2-modal .swal2-textarea:focus::placeholder {
+  -webkit-transition: opacity .3s .03s ease;
+  transition: opacity .3s .03s ease;
+  opacity: .8;
+}
+
+/* line 182, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input::-webkit-input-placeholder,
+.swal2-modal .swal2-file::-webkit-input-placeholder,
+.swal2-modal .swal2-textarea::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+
+/* line 186, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input::-moz-placeholder,
+.swal2-modal .swal2-file::-moz-placeholder,
+.swal2-modal .swal2-textarea::-moz-placeholder {
+  color: #e6e6e6;
+}
+
+/* line 190, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input:-ms-input-placeholder,
+.swal2-modal .swal2-file:-ms-input-placeholder,
+.swal2-modal .swal2-textarea:-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+/* line 194, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input::placeholder,
+.swal2-modal .swal2-file::placeholder,
+.swal2-modal .swal2-textarea::placeholder {
+  color: #e6e6e6;
+}
+
+/* line 198, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-range input {
+  float: left;
+  width: 80%;
+}
+
+/* line 201, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-range output {
+  float: right;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* line 207, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-range input,
+.swal2-modal .swal2-range output {
+  height: 43px;
+  line-height: 43px;
+  vertical-align: middle;
+  margin: 20px auto;
+  padding: 0;
+}
+
+/* line 214, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input {
+  height: 43px;
+  padding: 0 12px;
+}
+
+/* line 217, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-input[type='number'] {
+  max-width: 150px;
+}
+
+/* line 219, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-file {
+  font-size: 20px;
+}
+
+/* line 221, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-textarea {
+  height: 108px;
+  padding: 12px;
+}
+
+/* line 224, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-select {
+  color: #545454;
+  font-size: inherit;
+  padding: 5px 10px;
+  min-width: 40%;
+  max-width: 100%;
+}
+
+/* line 230, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-radio {
+  border: 0;
+}
+
+/* line 232, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-radio label:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* line 234, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-radio input,
+.swal2-modal .swal2-radio span {
+  vertical-align: middle;
+}
+
+/* line 237, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-radio input {
+  margin: 0 3px 0 0;
+}
+
+/* line 239, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-checkbox {
+  color: #545454;
+}
+
+/* line 241, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-checkbox input,
+.swal2-modal .swal2-checkbox span {
+  vertical-align: middle;
+}
+
+/* line 244, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-validationerror {
+  background-color: #f0f0f0;
+  margin: 0 -20px;
+  overflow: hidden;
+  padding: 10px;
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  display: none;
+}
+
+/* line 253, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-modal .swal2-validationerror::before {
+  content: '!';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ea7d7d;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+@supports (-ms-accelerator: true) {
+  /* line 266, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+  .swal2-range input {
+    width: 100% !important;
+  }
+
+  /* line 268, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+  .swal2-range output {
+    display: none;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 272, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+  .swal2-range input {
+    width: 100% !important;
+  }
+
+  /* line 274, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+  .swal2-range output {
+    display: none;
+  }
+}
+/* line 277, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 291, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-error {
+  border-color: #f27474;
+}
+
+/* line 293, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-error .x-mark {
+  position: relative;
+  display: block;
+}
+
+/* line 296, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-error .line {
+  position: absolute;
+  height: 5px;
+  width: 47px;
+  background-color: #f27474;
+  display: block;
+  top: 37px;
+  border-radius: 2px;
+}
+
+/* line 304, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-error .line.left {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 17px;
+}
+
+/* line 308, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-error .line.right {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 16px;
+}
+
+/* line 312, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-warning {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #f8bb86;
+  border-color: #facea8;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* line 319, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-info {
+  font-family: 'Open Sans', sans-serif;
+  color: #3fc3ee;
+  border-color: #9de0f6;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* line 326, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-question {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #87adbd;
+  border-color: #c9dae1;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* line 333, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success {
+  border-color: #a5dc86;
+}
+
+/* line 335, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success::before, .swal2-icon.swal2-success::after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 344, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success::before {
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+}
+
+/* line 352, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success::after {
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 60px;
+  transform-origin: 0 60px;
+}
+
+/* line 360, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success .placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(165, 220, 134, 0.2);
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
+/* line 370, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success .fix {
+  width: 7px;
+  height: 90px;
+  background-color: #fff;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 380, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 387, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success .line.tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 393, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-icon.swal2-success .line.long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 400, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps {
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+/* line 404, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 407, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle {
+  background: #3085d6;
+  border-radius: 2em;
+  color: #fff;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  z-index: 20;
+}
+
+/* line 416, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle:first-child {
+  margin-left: 0;
+}
+
+/* line 418, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle:last-child {
+  margin-right: 0;
+}
+
+/* line 420, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+  background: #3085d6;
+}
+
+/* line 422, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+  background: #add8e6;
+}
+
+/* line 424, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+  background: #add8e6;
+}
+
+/* line 426, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-progresssteps .swal2-progressline {
+  background: #3085d6;
+  height: .4em;
+  margin: 0 -1px;
+  z-index: 10;
+}
+
+/* line 432, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+[class^='swal2'] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@-webkit-keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  45% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  45% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+/* line 483, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.show-swal2 {
+  -webkit-animation: showSweetAlert 0.3s;
+  animation: showSweetAlert 0.3s;
+}
+
+/* line 486, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.show-swal2.no-animation {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* line 490, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.hide-swal2 {
+  -webkit-animation: hideSweetAlert 0.15s forwards;
+  animation: hideSweetAlert 0.15s forwards;
+}
+
+/* line 493, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.hide-swal2.no-animation {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@-webkit-keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+  }
+  100% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+  }
+}
+@keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+  }
+  100% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+  }
+}
+/* line 605, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.animate-success-tip {
+  -webkit-animation: animate-success-tip 0.75s;
+  animation: animate-success-tip 0.75s;
+}
+
+/* line 609, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.animate-success-long {
+  -webkit-animation: animate-success-long 0.75s;
+  animation: animate-success-long 0.75s;
+}
+
+/* line 613, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.swal2-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in;
+}
+
+@-webkit-keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+/* line 637, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.animate-error-icon {
+  -webkit-animation: animate-error-icon 0.5s;
+  animation: animate-error-icon 0.5s;
+}
+
+@-webkit-keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    margin-top: -6px;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    margin-top: -6px;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+/* line 683, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.animate-x-mark {
+  -webkit-animation: animate-x-mark 0.5s;
+  animation: animate-x-mark 0.5s;
+}
+
+@-webkit-keyframes pulse-warning {
+  0% {
+    border-color: #f8d486;
+  }
+  100% {
+    border-color: #f8bb86;
+  }
+}
+@keyframes pulse-warning {
+  0% {
+    border-color: #f8d486;
+  }
+  100% {
+    border-color: #f8bb86;
+  }
+}
+/* line 699, /Users/kcamel/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails-assets-sweetalert2-5.1.1/app/assets/stylesheets/sweetalert2/dist/sweetalert2.scss */
+.pulse-warning {
+  -webkit-animation: pulse-warning 0.75s infinite alternate;
+  animation: pulse-warning 0.75s infinite alternate;
+}
+
+@-webkit-keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* line 1, /Users/kcamel/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+#error_explanation {
+  color: red;
+}
+/* line 3, /Users/kcamel/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+/* line 10, /Users/kcamel/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.field_with_errors .form-control {
+  color: red;
+}

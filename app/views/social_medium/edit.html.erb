@@ -1,22 +1,74 @@
-<%= @user.name %>, <%= @user.email %>
+
+<div class="row-fluid">
+	<div class="col text-center">
+  		<h3><%= @user.name %></h3>
+	</div>
+</div>	
+<%= render 'shared/error_messages' %>
 
 <%= form_for(@social) do |f| %>
-  <%= render 'shared/error_messages' %>
-
-  <%= f.text_field :id, id: "social-radio", value: "My Precious" %>
-  <%= f.submit "Save", class: "btn btn-primary" %>
-  <br />
-  <%= f.label :twitter, onClick: "socialfn(\"twitter\",\"#{@social.twitter}\");"%>
-  <br />
-  <%= f.label :github, onClick: "socialfn(\"github\",\"#{@social.github}\");"%>
-  <br />
-  <%= f.label :instagram, onClick: "socialfn(\"instagram\",\"#{@social.instagram}\");"%>
-  <br />
-  <%= f.label :youtube, onClick: "socialfn(\"youtube\",\"#{@social.youtube}\");"%>
-  <br />
-  <%= f.label :facebook, onClick: "socialfn(\"facebook\",\"#{@social.facebook}\");"%>
-  <br />
-  <%# f.label :youtube, raw("#{check_box_tag('youtube')} Youtube"), onClick: "socialfn(\"youtube\",\"#{@social.youtube}\");"%>
-
-  <%= link_to "Back", "/#{current_user.name}" %>
+	<div class="form-row">
+		<div class="col-12 col-sm-6 offset-sm-2">
+			<div class="input-group mb-2">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">@</div>
+				</div>
+			  	<%= f.text_field 	:id, id: "social-radio", 
+			  						value: "",
+			  						style: "width: 85%;",
+			  						placeholder: "#{@user.name}" %>
+			</div>
+	  	</div>
+		<div class="col-6 offset-3 col-sm-4 offset-sm-0 p-0">
+			<%= f.submit "Save", class: "btn btn-primary" %>
+			<%= link_to "Back", "/#{@user.name}", class: "btn btn-success" %>
+		</div>	
+  	</div>
 <% end %>
+<div class="row p-3">
+  	<div class="col-3 col-sm-2 px-2">
+		<%= content_tag( :div,"", 
+							class: "card addsocial" )%>
+  		<%= image_tag("twitter.png", 
+  							alt: "Twitter", 
+  							class: "card-img",
+							onClick: "socialfn(\"twitter\",\"#{@social.twitter}\");" )%>
+	</div>
+
+  	<div class="col-3 col-sm-2 px-2">
+		<%= content_tag( :div,"", 
+							class: "card addsocial" )%>
+  		<%= image_tag("github.png", 
+  							alt: "Github", 
+  							class: "card-img",
+							onClick: "socialfn(\"github\",\"#{@social.github}\");" )%>
+
+	</div>
+  	<div class="col-3 col-sm-2 px-2">
+		<%= content_tag( :div,"", 
+							class: "card addsocial" )%>
+  		<%= image_tag("facebook.png", 
+  							alt: "Facebook", 
+  							class: "card-img",
+							onClick: "socialfn(\"facebook\",\"#{@social.facebook}\");" )%>
+
+	</div>
+  	<div class="col-3 col-sm-2 px-2">
+		<%= content_tag( :div,"", 
+							class: "card addsocial" )%>
+  		<%= image_tag("instagram.png", 
+  							alt: "Instagram", 
+  							class: "card-img",
+							onClick: "socialfn(\"instagram\",\"#{@social.instagram}\");" )%>
+
+	</div>	
+  	<div class="col-3 col-sm-2 px-2">
+		<%= content_tag( :div,"", 
+							class: "card addsocial" )%>
+  		<%= image_tag("youtube.png", 
+  							alt: "Youtube", 
+  							class: "card-img",
+							onClick: "socialfn(\"youtube\",\"#{@social.youtube}\");" )%>
+
+	</div>			
+</div>

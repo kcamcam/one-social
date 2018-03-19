@@ -19,7 +19,7 @@
 <!-- Github -->
 <% if @user.social_medium.github != "" %>
   <%= form_for(@social) do |f| %>
-    <%= f.submit "X",
+    <%= f.submit "X", class: "show",
       data: { confirm: 'Are you sure you want to delete',
               'confirm-button-text': 'Yea',
               'cancel-button-text': 'Nay',
@@ -36,7 +36,7 @@
 <!-- Instagram -->
 <% if @user.social_medium.instagram != "" %>
   <%= form_for(@social) do |f| %>
-    <%= f.submit "X",
+        <%= f.submit "X", class: "show",
       data: { confirm: 'Are you sure you want to delete',
               'confirm-button-text': 'Yea',
               'cancel-button-text': 'Nay',
