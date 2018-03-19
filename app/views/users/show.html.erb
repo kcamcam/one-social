@@ -1,3 +1,4 @@
+<%= render 'shared/error_messages' %>
 <!-- Twtitter -->
 <% if @user.social_medium.twitter != "" %>
   <%= form_for(@social) do |f| %>
@@ -83,4 +84,4 @@
   <% end %>
 <% end %>
 
-<%= link_to 'Add new Social', edit_social_medium_url %>
+<%= link_to 'Add/Edit Social Media', edit_social_medium_url %>

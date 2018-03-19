@@ -26,7 +26,7 @@ class SocialMediumController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to user_path(@user.name)
     else
-      flash[:error] = "invalid shit!"
+      flash[:error] = "Invalid username, only letters, numbers, dashes and underscores are permitted."
       render 'edit'
       # redirect_to user_path(@user.name)
     end

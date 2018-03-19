@@ -2,35 +2,21 @@
 
 <%= form_for(@social) do |f| %>
   <%= render 'shared/error_messages' %>
-  <% if !@social.github? %>
-    <%= f.label :github  %>
-    <%= f.text_field :github, class: 'form-control' %>
-    <br />
-  <% end %>
 
-  <% if !@social.twitter? %>
-    <%= f.label :twitter  %>
-    <%= f.text_field :twitter, class: 'form-control' %>
-    <br />
-  <% end %>
-
-  <% if !@social.instagram? %>
-    <%= f.label :instagram  %>
-    <%= f.text_field :instagram, class: 'form-control' %>
-    <br />
-  <% end %>
-
-  <% if !@social.youtube? %>
-    <%= f.label :youtube  %>
-    <%= f.text_field :youtube, class: 'form-control' %>
-    <br />
-  <% end %>
-  <% if !@social.facebook? %>
-    <%= f.label :facebook  %>
-    <%= f.text_field :facebook, class: 'form-control' %>
-    <br />
-  <% end %>
-
+  <%= f.text_field :id, id: "social-radio", value: "My Precious" %>
   <%= f.submit "Save", class: "btn btn-primary" %>
+  <br />
+  <%= f.label :twitter, onClick: "socialfn(\"twitter\",\"#{@social.twitter}\");"%>
+  <br />
+  <%= f.label :github, onClick: "socialfn(\"github\",\"#{@social.github}\");"%>
+  <br />
+  <%= f.label :instagram, onClick: "socialfn(\"instagram\",\"#{@social.instagram}\");"%>
+  <br />
+  <%= f.label :youtube, onClick: "socialfn(\"youtube\",\"#{@social.youtube}\");"%>
+  <br />
+  <%= f.label :facebook, onClick: "socialfn(\"facebook\",\"#{@social.facebook}\");"%>
+  <br />
+  <%# f.label :youtube, raw("#{check_box_tag('youtube')} Youtube"), onClick: "socialfn(\"youtube\",\"#{@social.youtube}\");"%>
+
   <%= link_to "Back", "/#{current_user.name}" %>
 <% end %>
