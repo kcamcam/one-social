@@ -5,7 +5,7 @@
   <ul class="navbar-nav ml-auto">
     <% if logged_in? %>
       <li class="nav-item">
-        <%= link_to "@#{current_user.name}", "/#{current_user.name}", class: "nav-link text-light btn btn-dark" %>
+        <%= link_to "@#{current_user.name}",  "/#{current_user.name}", class: "nav-link text-light btn btn-dark" %>
       </li>
     <% else %>
       <li class="nav-item">

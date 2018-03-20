@@ -12,7 +12,7 @@
 	  <!-- if not empty -->
 	  <% if @user.social_medium[sa] != "" && @user.social_medium[sa] != nil %>
 		<!-- Card -->
-		<div class="col-12 col-sm-6 col-lg-4 p-2">
+		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-2">
 	    <div class="card text-white">
 	      <%= image_tag("#{sa}-lg.png",
 	                alt: "#{sa}",
@@ -21,15 +21,15 @@
 										edit_social_medium_url  %>
 				<%= link_to "http://www.#{sa}.com/#{@social[sa]}" do %>
 				<div class="card-img-overlay p-1 pr-2">
-	        <h5 class="card-title pr-2">@<%= @social[sa] %></h5>
+	        <h5 class="card-title pr-4">@<%= @social[sa] %></h5>
 					<!-- if current user -->
 					<% if current_user == @user%>
 					<!-- Form Delete button -->
 						<%= form_for(@social) do |f| %>
 							<%= f.submit raw("&times"), class: "close-button",
 								data: { confirm: 'Are you sure you want to delete',
-												'confirm-button-text': 'Yea',
-												'cancel-button-text': 'Nay',
+												'confirm-button-text': 'Yup',
+												'cancel-button-text': 'Nope',
 												'confirm-button-color': '#a5d6a7',
 												'cancel-button-color': '#e57373',
 												'sweet-alert-type': 'error',
