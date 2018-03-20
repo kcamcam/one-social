@@ -1,6 +1,13 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="row-fluid px-2 pt-3">
+  <h2>Your missing social media link.</h2>
+  <h2>All of your social media in one place.</h2>
+  <h2>One link to rule them all.</h2>
+  <h2>Bloggers, vloggers, grammers make yourself visible to followers and subscribers.</h2>
+  <h2>1social.me/<strong>your_username(typed.js)</strong></h2>
+</div>
 
-<%= link_to "Sign up now!", new_user_path, class: "btn btn-lg btn-primary" %>
+<div class="row-fluid px-2 pt-3">
+  <%= link_to "Log in", login_path, class: "btn btn-lg btn-light" %>
+  <%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-light" %>
+  <%= link_to "Users", users_path, class: "btn btn-lg btn-light" %>
+</div>

@@ -17,6 +17,7 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook"]
   end
 
   def update

@@ -1,14 +1,16 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "Home", root_path %>,
-    <%= link_to "Users", users_path %>,
-    <strong>Account: </strong>
-    <% if logged_in? %>
-    <%= link_to "Profile", "/#{current_user.name}" %>,
-    <%= link_to "Edit Profile", edit_user_path(current_user) %>,
-    <%= link_to "Log out", logout_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log in", login_path %>
-    <% end %>
+<nav class="navbar navbar-expand-md bg-light px-3">
+  <div class="nav-item">
+    <%= link_to raw("<strong>1Social</strong>.me"), root_path, class: "navbar-brand text-dark" %>
   </div>
-</header>
+  <ul class="navbar-nav ml-auto">
+    <% if logged_in? %>
+      <li class="nav-item">
+        <%= link_to "@#{current_user.name}", "/#{current_user.name}", class: "nav-link text-light btn btn-dark" %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to "Log in", login_path, class: "nav-link text-light btn btn-dark" %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

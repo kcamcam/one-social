@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @user = User.find_by_name(params[:id]) #find by username instead
     @social = @user.social_medium
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook"]
   end
 
   def new

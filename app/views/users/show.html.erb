@@ -1,13 +1,12 @@
 <div class="row-fluid">
-	<div class="col text-center">
-  		<h3>@<%= @user.name %></h3>
+	<div class="col text-center pt-3 px-2">
+  		<h1 class="p-2 pb-3 bg-dark text-light" style="border-radius: 3px;">@<%= @user.name %></h1>
 	</div>
 </div>
 
 <%= render 'shared/error_messages' %>
 
 <div class="row px-3">
-	<% @socialarray = ["twitter", "github", "instagram","youtube","facebook"] %>
 	<!-- each social media do -->
 	<% @socialarray.each do |sa| %>
 	  <!-- if not empty -->
@@ -61,6 +60,10 @@
 			</div>
 		</div>
 		<!-- ./Card + add new/edit -->
+		<div class="col-12 p-2 text-right">
+			<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-light" %>
+			<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-light" %>
+		</div>
 	<% end %>
 	<!-- ./if current user -->
 </div>
