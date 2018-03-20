@@ -14,6 +14,9 @@ function socialfn(platform,anchor){
 	// Change the anchor type to @ or / depending on platform
 	if(platform == "youtube")
 		$(".input-group-text").text("/");
+	else if (platform == "bitcoin" || platform == "ethereum") {
+		$(".input-group-text").text("#");
+	}
 	else
 		$(".input-group-text").text("@");
 }

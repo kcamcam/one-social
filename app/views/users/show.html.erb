@@ -1,6 +1,8 @@
+<% provide(:title, "@#{@user.name}") %>
 <div class="row-fluid">
-	<div class="col text-center pt-3 px-2">
-  		<h1 class="p-2 pb-3 bg-light text-dark" style="border-radius: 3px;">@<%= @user.name %></h1>
+	<div class="col-12 text-center pt-3 px-2">
+  		<h1 class="p-2 pb-3 bg-light text-dark d-none d-sm-block" style="border-radius: 3px;">@<%= @user.name %></h1>
+		  <h3 class="p-2 pb-3 bg-light text-dark d-block d-sm-none" style="border-radius: 3px;">@<%= @user.name %></h3>
 	</div>
 </div>
 
@@ -63,13 +65,18 @@
 	<!-- if current user show delete-->
 	<% if current_user == @user %>
 		<!-- Card + add new/edit -->
-		<div class="col-12 col-sm-6 col-lg-4 p-2">
+		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-2">
 			<div class="card text-white">
-				<%= link_to image_tag("plus-lg.png",class: "card-img"), edit_social_medium_url  %>
+				<%= image_tag("plus-lg.png", class: "card-img") %>
+				<%= link_to edit_social_medium_url  do %>
+					<div class="card-img-overlay p-1 pr-2">
+						<h5 class="card-title pr-4">Add/Edit</h5>
+					</div>
+				<% end %>
 			</div>
 		</div>
 		<!-- ./Card + add new/edit -->
-		<div class="col-12 p-2 text-right">
+		<div class="col-12 text-right pt-3 pb-4 px-2">
 			<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-light" %>
 			<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-light" %>
 		</div>

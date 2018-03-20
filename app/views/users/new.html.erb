@@ -1,7 +1,8 @@
 <% provide(:title, '📝 Sign up') %>
 <div class="row-fluid">
 	<div class="col-12 text-center pt-3 px-2">
-    <h1>Sign Up</h1>
+    <h1 class="text-dark d-none d-sm-block">Sign Up</h1>
+		<h2 class="text-dark d-block d-sm-none">Sign Up</h2>
   </div>
   <%= render 'shared/error_messages' %>
 </div>
@@ -14,7 +15,7 @@
           <div class="input-group-text">1social.me/</div>
         </div>
         <%= f.text_field :name, class: 'form-control' %>
-        <small class="form-text text-muted">This is the username we will use to create your personal link.</small>
+				<small class="text-muted">This is the username we will use to create your personal link.</small>
       </div>
 
       <div class="input-group mb-3" style="width:100%;">
@@ -38,7 +39,7 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
 
-      <%= f.submit "Create my account", class: "btn btn-primary form-control mb-2" %>
+      <%= f.submit "Create my account", class: "btn btn-primary form-control my-2" %>
 
     <% end %>
   </div>
