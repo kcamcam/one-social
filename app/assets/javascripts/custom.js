@@ -1,3 +1,4 @@
+// Edit/Add new social media page js
 function socialfn(platform,anchor){
 	var socialradio = document.getElementById('social-radio');
 	socialradio.name = 'social_medium['+platform+']';
@@ -16,3 +17,10 @@ function socialfn(platform,anchor){
 	else
 		$(".input-group-text").text("@");
 }
+//add opacity to images
+$(function(){
+	$(".edit-card-img").click(function(){
+		$(".edit-card-img").removeClass("full-opacity");
+		$(this).addClass("full-opacity");
+	});
+});

@@ -44,16 +44,25 @@
 }
 
 // Edit Social Media Page
+.edit-card-img{
+  opacity: 0.5;
+}
+.edit-card-img:hover{
+  opacity: 1;
+}
+.full-opacity{
+  opacity: 1;
+}
+
+// Common CSS
+.card{
+	border:none;
+}
+.edit-card-img:hover, .card-img-overlay:hover, .close-button:hover{
+  cursor: pointer;
+}
 .field_with_errors {
   .form-control {
     color: red;
   }
-}
-.card{
-	border:none;
-}
-
-// Common CSS
-.edit-card-img:hover, .card-img-overlay:hover, .close-button:hover{
-  cursor: pointer;
 }

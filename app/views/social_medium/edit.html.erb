@@ -1,7 +1,7 @@
 
 <div class="row-fluid">
 	<div class="col text-center">
-  		<h3>@<%= @user.name %></h3>
+  		<h1> Add new social media</h1>
 	</div>
 </div>
 <%= render 'shared/error_messages' %>
@@ -36,7 +36,7 @@
 				<%= image_tag("#{sa}.png",
 									alt: "#{sa.capitalize}",
 									class: "card-img edit-card-img",
-								onClick: "socialfn(\"#{sa}\",\"#{@social[sa]}\");" )%>
+									onClick: "socialfn(\"#{sa}\",\"#{@social[sa]}\");" )%>
 		</div>
 	<% end %>
 </div>
