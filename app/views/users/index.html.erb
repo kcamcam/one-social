@@ -1,19 +1,54 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
-<%= form_tag users_path, method: :get do %>
-  <%= text_field_tag 'term', params[:term], placeholder: "Enter user's name or surname" %>
-  <%= submit_tag 'Search' %>
-<% end %>
-<%= will_paginate %>
-  <ul class="users">
+<!-- Title -->
+<div class="row-fluid p-2">
+  <h1>All users</h1>
+</div>
+<!-- ./Title -->
+
+<!-- Search Field -->
+<div class="row-fluid p-2">
+  <%= form_tag users_path, method: :get do %>
+  <div class="input-group mb-2" style="width:100%;">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+      <%= text_field_tag 'term', params[:term], placeholder: "Enter the username you would like to search for", class: "form-control" %>
+      <div class="input-group-append">
+        <%= submit_tag "Search", class: "btn btn-sm btn-success" %>
+      </div>
+  </div>
+  <% end %>
+</div>
+<!-- ./Search Field -->
+
+
+<!-- Paginated content -->
+<div class="row px-3">
     <% @users.each do |user| %>
-      <li>
-        <%= link_to user.name, "/#{user.name}" %>
-        <% if !current_user.nil? && current_user.admin? && !current_user?(user) %>
-          | <%= link_to "delete", user, method: :delete,
-                                        data: { confirm: "You sure?" } %>
-        <% end %>
-      </li>
+      <div class="list-inline">
+        <li class="list-inline-item">
+        <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-light m-2"%>
+        </li>
+      </div>
+      <%# If admin offer delete option %>
+      <%# if !current_user.nil? && current_user.admin? && !current_user?(user) %>
+        <%# <span> | </span>%>
+        <%# link_to "delete", user, method: :delete,data: { confirm: "You sure?" } %>
+      <%# end %>
     <% end %>
-  </ul>
-<%= will_paginate %>
+</div>
+<!-- ./Paginated content -->
+
+<!-- Pagination links -->
+<div class="row pt-3 justify-content-center text-dark">
+  <%= will_paginate %>
+  <script type="text/javascript">
+    $("ul.pagination li").addClass("page-item");
+	  $("ul.pagination li a").addClass("page-link");
+  </script>
+</div>
+<!-- ./Pagination links -->
+
+<div class="row-fluid px-2">
+  <%= link_to "All Users", users_path, class: "btn btn-lg btn-light" %>
+</div>

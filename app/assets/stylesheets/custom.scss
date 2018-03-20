@@ -5,8 +5,19 @@
     margin: 0 0 30px 0;
   }
 }
+// All Users Page
+.users{
+  list-style-type: none;
+}
+.active .page-link{
+  background-color: #343a40!important;
+  border-color: #343a40!important;
+}
+.page-link{
+  color:#343a40;
+}
 
-// Show User Page
+// Show Profile Page
 .card-img-overlay{
   display:flex;
 }
@@ -16,7 +27,6 @@
   position: absolute;
   right:0;
 }
-
 .close-button{
   position: absolute;
   right:0;
@@ -29,16 +39,18 @@
   text-shadow: 0 1px 0 #fff;
   opacity: 0.6;
 }
-// Social Media Page
+
+// Edit Social Media Page
 .field_with_errors {
   .form-control {
     color: red;
   }
 }
-
-.card-img:hover, .card-img-overlay:hover, .close-button:hover{
-	cursor: pointer;
-}
 .card{
 	border:none;
+}
+
+// Common CSS
+.card-img:hover, .card-img-overlay:hover, .close-button:hover{
+  cursor: pointer;
 }
