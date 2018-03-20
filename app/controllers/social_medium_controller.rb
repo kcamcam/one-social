@@ -17,12 +17,13 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter", "github", "instagram","youtube","facebook"]
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
   end
 
   def update
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
       render 'edit'
@@ -35,7 +36,7 @@ class SocialMediumController < ApplicationController
 
   private
     def social_params
-      params.require(:social_medium).permit(:twitter, :github, :instagram, :youtube, :facebook)
+      params.require(:social_medium).permit(:twitter, :github, :instagram, :youtube, :facebook, :pinterest,:steam, :bitcoin, :ethereum)
     end
     # Before filters
 

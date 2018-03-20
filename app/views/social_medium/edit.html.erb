@@ -1,7 +1,7 @@
 
 <div class="row-fluid">
 	<div class="col text-center">
-  		<h1> Add new social media</h1>
+  		<h1> Add new or edit social media</h1>
 	</div>
 </div>
 <%= render 'shared/error_messages' %>
@@ -41,3 +41,15 @@
 	<% end %>
 </div>
 <!-- ./The cards -->
+<div class="row-fluid p-2">
+	<%= link_to "Back", "/#{current_user.name}", class: "btn btn-primary" %>
+</div>
+<script type="text/javascript">
+//add opacity to images
+$(function(){
+	$(".edit-card-img").click(function(){
+		$(".edit-card-img").removeClass("full-opacity");
+		$(this).addClass("full-opacity");
+	});
+});
+</script>

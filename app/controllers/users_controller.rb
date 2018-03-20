@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @user = User.find_by_name(params[:id]) #find by username instead
     @social = @user.social_medium
-    @socialarray = ["twitter", "github", "instagram","youtube","facebook"]
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
   end
 
   def new
@@ -44,6 +44,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @social = @user.social_medium
+    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to user_path(@user.name)

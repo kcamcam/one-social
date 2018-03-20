@@ -17,32 +17,41 @@
 	      <%= image_tag("#{sa}-lg.png",
 	                alt: "#{sa}",
 	                class: "card-img")%>
-				<%# link_to image_tag("#{sa}-lg.png",alt: "#{sa}",class: "card-img"),
-										edit_social_medium_url  %>
-				<%= link_to "http://www.#{sa}.com/#{@social[sa]}" do %>
-				<div class="card-img-overlay p-1 pr-2">
-	        <h5 class="card-title pr-4">@<%= @social[sa] %></h5>
-					<!-- if current user -->
-					<% if current_user == @user%>
-					<!-- Form Delete button -->
-						<%= form_for(@social) do |f| %>
-							<%= f.submit raw("&times"), class: "close-button",
-								data: { confirm: 'Are you sure you want to delete',
-												'confirm-button-text': 'Yup',
-												'cancel-button-text': 'Nope',
-												'confirm-button-color': '#a5d6a7',
-												'cancel-button-color': '#e57373',
-												'sweet-alert-type': 'error',
-												text: "#{sa.capitalize}"}
-							%>
-							<%# f.label :"#{sa} @#{@user.social_medium[sa]}" %>
-							<% f.text_field :"#{sa}", style: 'display: none;', value: '' %>
-						<% end %>
-						<!-- ./Form Delete button -->
-					<% end %>
-					<!-- ./if current user -->
-	      </div>
+				<% if sa == "steam" %>
+					<% @link = "http\://steamcommunity.com/profiles/#{@social[sa]}" %>
+				<% elsif sa == "ethereum" %>
+					<% @link = "http\://www.etherchain.org/account/#{@social[sa]}" %>
+				<% elsif sa == "bitcoin" %>
+					<% @link = "http\://blockchain.info/address/#{@social[sa]}" %>
+				<% elsif sa == "pinterest" %>
+					<% @link = "http\://pinterest.ca/#{@social[sa]}" %>
+				<% else %>
+					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 				<% end %>
+				<!-- ./linkdo create link around card -->
+				<%= link_to @link do %>
+					<div class="card-img-overlay p-1 pr-2">
+		        <h5 class="card-title pr-4">@<%= @social[sa] %></h5>
+						<!-- if current user -->
+						<% if current_user == @user %>
+						<!-- Form Delete button -->
+							<%= form_for (@social) do |f| %>
+								<%= f.text_field :"#{sa}", style: 'display: none;', value: "" %>
+								<%= f.submit raw("&times"), class: "close-button",
+											data: { confirm: 'Are you sure you want to delete',
+															'confirm-button-text': 'Yup',
+															'cancel-button-text': 'Nope',
+															'confirm-button-color': '#a5d6a7',
+															'cancel-button-color': '#e57373',
+															'sweet-alert-type': 'error',
+															text: "#{sa.capitalize}"}%>
+							<% end %>
+							<!-- ./Form Delete button -->
+						<% end %>
+						<!-- ./if current user -->
+		      </div>
+				<% end %>
+				<!-- ./end link do  create link around card -->
 	    </div>
 	  </div>
 		<!-- ./Card -->

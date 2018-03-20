@@ -13,6 +13,7 @@
 #              admin: true)
 
 social1 = SocialMedium.new(github: "kcamcam")
+social1 = SocialMedium.new(eth: "ethereum")
 User.create!(name:  "Example-User",
                 email: "example@railstutorial.org",
                 password:              "foobar",
