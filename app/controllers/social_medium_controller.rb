@@ -23,10 +23,10 @@ class SocialMediumController < ApplicationController
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
     if @social.update_attributes(social_params)
-      flash[:success] = "Profile updated"
-      redirect_to user_path(@user.name)
+      flash[:success] = "Updated"
+      render 'edit'
     else
-      flash[:error] = "Invalid username, only letters, numbers, dashes and underscores are permitted."
+      flash[:error] = "Invalid username, either its already taken or its invalid. Only letters, numbers, dashes and underscores are permitted."
       render 'edit'
       # redirect_to user_path(@user.name)
     end

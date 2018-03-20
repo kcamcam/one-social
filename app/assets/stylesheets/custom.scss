@@ -6,13 +6,37 @@
   }
 }
 
+// Show User Page
+.card-img-overlay{
+  display:flex;
+}
+.card-title{
+  color:white;
+  align-self:center;
+  position: absolute;
+  right:0;
+}
+
+.close-button{
+  position: absolute;
+  right:0;
+  border:none;
+  background-color: rgba(0,0,0,0);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.6;
+}
+// Social Media Page
 .field_with_errors {
   .form-control {
     color: red;
   }
 }
 
-.card-img:hover{
+.card-img:hover, .card-img-overlay:hover, .close-button:hover{
 	cursor: pointer;
 }
 .card{
