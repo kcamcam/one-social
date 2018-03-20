@@ -21,7 +21,7 @@ User.create!(name:  "Example-User",
                 admin: true,
                 social_medium: social1)
 99.times do |n|
-  name  = Faker::Name.unique.first_name
+  name  = Faker::Name.unique.first_name.downcase
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   social2 = SocialMedium.new
