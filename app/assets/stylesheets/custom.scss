@@ -1,3 +1,12 @@
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
 #error_explanation {
   color: red;
   ul {
@@ -52,6 +61,23 @@
 }
 .full-opacity{
   opacity: 1;
+}
+
+
+//Footer Shiz
+footer{
+  background-color: #eeeeee;
+}
+
+.footer-copyright{
+  background-color: #bdbdbd;
+}
+.text-grey{
+  color:#424242;
+}
+.text-grey a:hover {
+  text-decoration: none;
+  color: #757575;
 }
 
 // Common CSS

@@ -1,1 +1,64 @@
+<!-- <script src="fontawesome-all.js" crossorigin="anonymous"></script> -->
+<%= javascript_include_tag "fontawesome-all.js" %>
+<footer class="text-grey">
+  <div class="container-fluid py-5">
+    <div class="row mx-4">
+      <!-- only show on lg screens -->
+      <div class="col-12 col-sm-3 d-none d-sm-block">
+        <small><i class="far fa-heart"></i> made with love</small>
+        <br />
+        <small><i class="far fa-coffee"></i> and lots of cofee</small>
+        <br />
+        <small><i class="far fa-user-circle"></i> by <a href="https://kcamel.com" class="text-grey">Kevin Camellini</a></small>
+      </div>
 
+      <div class="col-4 col-sm-3">
+        <small><strong>Navigation</strong></small>
+        <br />
+        <small><%= link_to "Home", root_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Search", users_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Login", login_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Sign up", new_user_path, class: "text-grey" %></small>
+      </div>
+
+      <div class="col-4 col-sm-3">
+        <small><strong>1Social</strong></small>
+        <br />
+        <small><%= link_to "About", about_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Contact", contact_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Help", help_path, class: "text-grey" %></small>
+      </div>
+
+      <div class="col-4 col-sm-3">
+        <small><strong>Legal</strong></small>
+        <br />
+        <small><%= link_to "Terms", terms_path, class: "text-grey" %></small>
+        <br />
+        <small><%= link_to "Privacy", privacy_path, class: "text-grey" %></small>
+        <br />
+      </div>
+      <!-- only show on small screens -->
+      <div class="col-12 col-sm-3 d-block d-sm-none">
+        <br />
+        <small><i class="far fa-heart"></i> made with love</small>
+        <br />
+        <small><i class="far fa-coffee"></i> and lots of cofee</small>
+        <br />
+        <small><i class="far fa-user-circle"></i> by <a href="https://kcamel.com" class="text-grey">Kevin Camellini</a></small>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-copyright text-left">
+    <div class="container-fluid py-4">
+      <div class="row mx-4">
+        <small><i class="fal fa-copyright"></i> 2018 <strong>1Social</strong>.me</small>
+      </div>
+    </div>
+  </div>
+</footer>
