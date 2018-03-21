@@ -42,8 +42,12 @@
 	<% end %>
 </div>
 <!-- ./The cards -->
+
 <div class="row-fluid p-2 pb-5 text-right">
-	<%= link_to "Back", "/#{current_user.name}", class: "btn btn-light" %>
+	<div><small>*click the help button if you're having trouble finding your username</small></div>
+	<br />
+	<%= link_to "Help", help_path,class: "btn btn-light text-right" %>
+	<%= link_to "Back", "/#{current_user.name}", class: "btn btn-light text-right" %>
 </div>
 
 <script type="text/javascript">

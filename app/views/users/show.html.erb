@@ -49,6 +49,8 @@
 					<% @link = "http\://www.#{sa}.com/in/#{@social[sa]}" %>
 				<% elsif sa == "twitch" %>
 					<% @link = "http\://www.#{sa}.tv/#{@social[sa]}" %>
+				<% elsif sa == "youtube" %>
+					<% @link = "http\://www.#{sa}.com/channel/#{@social[sa]}" %>
 				<% elsif sa == "origin" || sa == "discord"%>
 					<% @link = "" %>
 				<% else %>
