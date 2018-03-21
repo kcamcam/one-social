@@ -2,7 +2,7 @@ class SocialMedium < ApplicationRecord
 	belongs_to :user
 	validates_uniqueness_of :user_id
 	@socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum"]
-	VALID_NAME_REGEX = /\A[a-z0-9\-_@]+\z/i #letters,numbers,dashes,underscores
+	VALID_NAME_REGEX = /\A[a-z0-9\-_@#]+\z/i #letters,numbers,dashes,underscores
 
 	@socialarray.each do |social|
 		validates :"#{social}",

@@ -39,8 +39,8 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
 
-      <%= f.submit "Create my account", class: "btn btn-primary form-control my-2" %>
-
+      <%= f.submit "Sign Up", class: "btn btn-primary form-control my-2" %>
+			<small>By clicking Sign Up, you agree to our <%= link_to "Terms & Condition's",terms_path %> and <%= link_to "Privacy Policy", privacy_path %>.</small>
     <% end %>
   </div>
 </div>

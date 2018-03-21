@@ -30,29 +30,27 @@
 				<% elsif sa == "googleplus" %>
 					<% @link = "http\://plus.google.com/#{@social[sa]}" %>
 				<% elsif sa == "pinterest" %>
-					<% @link = "http\://www.#{sa}.ca/#{@social[sa]}" %>
+					<% @link = "http\://#{sa}.ca/#{@social[sa]}" %>
 				<% elsif sa == "snapchat" %>
-					<% @link = "http\://www.#{sa}.com/add/#{@social[sa]}" %>
+					<% @link = "http\://#{sa}.com/add/#{@social[sa]}" %>
 				<% elsif sa == "messenger" %>
 					<% @link = "http\://m.me/#{@social[sa]}" %>
+				<% elsif sa == "hackernews" %>
+					<% @link = "http\://news.ycombinator.com/user?id=#{@social[sa]}" %>
+				<% elsif sa == "keybase" %>
+					<% @link = "http\://#{sa}.io/#{@social[sa]}" %>
+				<% elsif sa == "devto" %>
+					<% @link = "http\://dev.to/#{@social[sa]}" %>
+				<% elsif sa == "angel" %>
+					<% @link = "http\://#{sa}.co/#{@social[sa]}" %>
+				<% elsif sa == "linkedin" %>
+					<% @link = "http\://#{sa}.com/in/#{@social[sa]}" %>
+				<% elsif sa == "twitch" %>
+					<% @link = "http\://#{sa}.tv/#{@social[sa]}" %>
 				<% elsif sa == "reddit" %>
 					<% @link = "http\://#{sa}.com/user/#{@social[sa]}" %>
-				<% elsif sa == "hackernews" %>
-					<% @link = "http\://#{sa}.com/user?id=#{@social[sa]}" %>
-				<% elsif sa == "keybase" %>
-					<% @link = "http\://www.#{sa}.io/#{@social[sa]}" %>
-				<% elsif sa == "devto" %>
-					<% @link = "http\://www.dev.to/#{@social[sa]}" %>
-				<% elsif sa == "angel" %>
-					<% @link = "http\://www.#{sa}.co/#{@social[sa]}" %>
-				<% elsif sa == "linkedin" %>
-					<% @link = "http\://www.#{sa}.com/in/#{@social[sa]}" %>
-				<% elsif sa == "twitch" %>
-					<% @link = "http\://www.#{sa}.tv/#{@social[sa]}" %>
-				<% elsif sa == "youtube" %>
-					<% @link = "http\://www.#{sa}.com/channel/#{@social[sa]}" %>
 				<% elsif sa == "origin" || sa == "discord"%>
-					<% @link = "" %>
+					<% @link = "javascript:window.location.reload(false)" %>
 				<% else %>
 					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 				<% end %>

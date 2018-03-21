@@ -5,6 +5,64 @@
 		<h2 class="text-dark d-block d-sm-none">About</h2>
   </div>
 </div>
-<div class="row-fluid px-1 px-sm-5 pt-3 text-dark">
-	<h5>TODO</h5>
+<div class="row-fluid px-1 px-sm-5 pt-3 pb-5 text-dark">
+	<div class="col-12 col-sm-10 offset-sm-1">
+		<h4>Why 1Social?</h4>
+		<span><strong>The problem:</strong> Content creators on youtube, instagram, twitter, etc... create clutter and an abundance of links to reach out to their followers/subscribers.</span>
+		<br />
+		<span><strong>The solution:</strong> 1Social.me</span>
+		<br /><br />
+
+		<h4>What is <strong>1Social</strong>?</h4>
+		<span><strong>Example:</strong> From one of my favorite content creators <a href="https://youtube.com/MKBHD">MKBHD</a>'s review of the Galxy S9:</span>
+		<br/>
+		<small>Note: the pictures are extra tiny on mobile, sorry.</small>
+		<br />
+		<button class="btn btn-light mt-2" id="before-btn" data-toggle="collapse" href="#before" type="button" >Before</button>
+		<button class="btn btn-light mt-2" id="after-btn" data-toggle="collapse" href="#after" type="button" >After</button>
+		<button class="btn btn-light mt-2" id="hide-btn" type="button" >Hide</button>
+		<script>
+			$('#after-btn').click( function(e) {
+			  $('#before').collapse('hide');
+			});
+			$('#before-btn').click( function(e) {
+				$('#after').collapse('hide');
+			});
+			$('#hide-btn').click( function(e) {
+				$('#after').collapse('hide');
+				$('#before').collapse('hide');
+			});
+		</script>
+		<div class="row">
+			<div class="col-12 col-sm-10 offset-sm-1">
+				<div class="collapse" id="before">
+				  <div class="card card-body">
+				    <%= image_tag("before.png", alt: "Before", class: "img-fluid") %>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-10 offset-sm-1">
+				<div class="collapse" id="after">
+				  <div class="card card-body">
+				  	<%= image_tag("after.png", alt: "Before", class: "img-fluid") %>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<br />
+
+		<h4>Who am I?</h4>
+		<span>I'm this guy <a href="https://kcamel.com">kcamel.com</a> and this guy <a href="https://1social.me/kcamel">1social.me/kcamel</a>. I like to code stuff.</span>
+		<br /><br />
+		<h4>Where does <strong>1social</strong> hail from?</h4>
+		<span>Oh Canada!</span>
+		<br /><br />
+		<h4>Like <strong>1Social</strong>?</h4>
+		<span>Then spread the word! What are you waiting for?</span>
+		<br />
+		<span>Also, you can send me some eth, btc, or money if you're feeling generous, but you don't have to. Check my <a href="https://1social.me/kcamel">1Social</a> page for my eth, btc, or paypal addresses.</span>
+		<br /><br />
+
+	</div>
 </div>
