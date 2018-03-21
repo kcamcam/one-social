@@ -3,12 +3,19 @@
   <h4 class="d-block d-sm-none"><span class="typed-xs"></span></h4>
   <script type="text/javascript">
   // Typed.js from https://mattboldt.com/demos/typed-js/
-    var options = {strings: ["Follow me on: <br />instagram @user_name",
-                  "Follow me on: <br />youtube /user_name",
-                  "Follow me on: <br />facebook @user_name",
-                  "Follow me on: <br /><span class=\"text-primary\">everywhere</span> <strong><a href=\"http\://kcamel.com\" class=\"text-dark\">1social.me/user_name</strong></a>"],
+    var options = {strings: [
+                    "Follow me on: <br />Instagram @user_name",
+                    "Follow me on: <br />Youtube /user_name",
+                    "Follow me on: <br />Facebook @user_name",
+                    "Follow me on: <br /><span class=\"text-primary\">Everywhere</span> <strong><a href=\"http\://kcamel.com\" class=\"text-dark\">1social.me/user_name</strong></a>"
+                  ],
                   smartBackspace: true,
-                  typeSpeed: 40}
+                  typeSpeed: 40,
+                  onComplete: function(){
+  	                 $(".card-img-welcome").css('filter','grayscale(0)');
+                     $(".card-img-welcome").css('opacity','0.8');
+                  }
+                };
     var typed = new Typed('.typed', options );
     var typed = new Typed('.typed-xs', options);
   </script>
@@ -26,7 +33,7 @@
 				<%= image_tag("#{sa}.png",
 									alt: "#{sa.capitalize}",
 									class: "card-img card-img-welcome",
-                  style: "  -webkit-filter: grayscale(1);filter: grayscale(1); opacity: 0.4;")%>
+                  style: "-webkit-filter: grayscale(1);filter: grayscale(1); opacity: 0.4;transition-duration: 1300ms;")%>
 		</div>
 	<% end %>
 </div>
