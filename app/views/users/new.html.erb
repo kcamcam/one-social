@@ -10,13 +10,15 @@
 <div class="row-fluid">
 	<div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 pt-3 px-2 pb-5">
     <%= form_for(@user) do |f| %>
-      <div class="input-group mb-3" style="width:100%;">
+      <div class="input-group mb0" style="width:100%;">
         <div class="input-group-prepend">
           <div class="input-group-text">1social.me/</div>
         </div>
         <%= f.text_field :name, class: 'form-control' %>
-				<small class="text-muted">This is the username we will use to create your personal link.</small>
       </div>
+			<div class="mb-3">
+				<small class="text-muted">This is the username we will use to create your personal link.</small>
+			</div>
 
       <div class="input-group mb-3" style="width:100%;">
         <div class="input-group-prepend">
