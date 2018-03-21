@@ -1,6 +1,6 @@
 <% provide(:title, "@#{@user.name}") %>
-<div class="row-fluid">
-	<div class="col-12 text-center pt-3 px-2">
+<div class="row pt-3 px-4 px-md-4 mx-md-5">
+	<div class="col-12 text-center p-2">
   		<h1 class="p-2 pb-3 bg-light text-dark d-none d-sm-block" style="border-radius: 3px;">@<%= @user.name %></h1>
 		  <h3 class="p-2 pb-3 bg-light text-dark d-block d-sm-none" style="border-radius: 3px;">@<%= @user.name %></h3>
 	</div>
@@ -8,7 +8,7 @@
 
 <%= render 'shared/error_messages' %>
 
-<div class="row px-3 pb-5">
+<div class="row pb-5 px-4 px-md-4 mx-md-5">
 	<!-- each social media do -->
 	<% @socialarray.each do |sa| %>
 	  <!-- if not empty -->
