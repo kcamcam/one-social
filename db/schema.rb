@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320073357) do
+ActiveRecord::Schema.define(version: 20180320221014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 20180320073357) do
     t.string "ethereum"
     t.string "steam"
     t.string "pinterest"
+    t.string "medium"
+    t.string "reddit"
+    t.string "hackernews"
+    t.string "keybase"
+    t.string "flickr"
+    t.string "twitch"
+    t.string "googleplus"
+    t.string "snapchat"
+    t.string "angel"
+    t.string "linkedin"
+    t.string "devpost"
+    t.string "devto"
+    t.string "origin"
+    t.string "discord"
+    t.string "whatsapp"
+    t.string "messenger"
     t.index ["id"], name: "index_social_media_on_id"
     t.index ["user_id"], name: "index_social_media_on_user_id", unique: true
   end

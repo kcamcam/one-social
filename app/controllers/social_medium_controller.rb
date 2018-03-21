@@ -17,18 +17,18 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
+    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum"]
   end
 
   def update
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter", "github", "instagram","youtube","facebook","pinterest","steam","bitcoin","ethereum"]
+    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
       render 'edit'
     else
-      flash[:error] = "Invalid username, either its already taken or its invalid. Only letters, numbers, dashes and underscores are permitted."
+      flash[:error] = "Invalid username, either its already taken or its invalid. Only letters, numbers,@, dashes and underscores are permitted (abc,123,@,-,_)."
       render 'edit'
       # redirect_to user_path(@user.name)
     end
@@ -36,7 +36,7 @@ class SocialMediumController < ApplicationController
 
   private
     def social_params
-      params.require(:social_medium).permit(:twitter, :github, :instagram, :youtube, :facebook, :pinterest,:steam, :bitcoin, :ethereum)
+      params.require(:social_medium).permit(:twitter,:instagram,:youtube,:facebook,:googleplus,:pinterest,:snapchat,:flickr,:messenger,:medium,:reddit,:hackernews,:github,:keybase,:devpost,:devto,:angel,:linkedin,:steam,:origin,:twitch,:discord,:bitcoin,:ethereum)
     end
     # Before filters
 
