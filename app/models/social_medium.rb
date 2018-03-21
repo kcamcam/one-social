@@ -6,7 +6,7 @@ class SocialMedium < ApplicationRecord
 
 	@socialarray.each do |social|
 		validates :"#{social}",
-							length: { maximum: 40 },
+							length: { maximum: 50 },
 							format: { with: VALID_NAME_REGEX },
 							allow_blank: true,
 							allow_nil: true,

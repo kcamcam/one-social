@@ -59,10 +59,17 @@
 				<!-- ./linkdo create link around card -->
 				<%= link_to @link do %>
 					<div class="card-img-overlay p-1 pr-2">
-		        <h5 class="card-title pr-4">@<%= @social[sa] %></h5>
+						<% if @social[sa].length > 12  %>
+		        	<h5 class="card-title pr-4"><%= sa.capitalize %></h5>
+						<% elsif  sa == "medium" %>
+							<h5 class="card-title pr-4"><%= @social[sa] %></h5>
+						<% else %>
+							<h5 class="card-title pr-4">@<%= @social[sa] %></h5>
+						<% end %>
+
 						<!-- if current user -->
 						<% if current_user == @user %>
-						<!-- Form Delete button -->
+							<!-- Form Delete button -->
 							<%= form_for (@social) do |f| %>
 								<%= f.text_field :"#{sa}", style: 'display: none;', value: "" %>
 								<%= f.submit raw("&times"), class: "close-button",

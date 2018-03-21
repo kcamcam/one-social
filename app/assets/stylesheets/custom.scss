@@ -7,16 +7,6 @@ main {
   flex: 1 0 auto;
 }
 
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-// Landing page
-
-
 // All Users Page
 .users{
   list-style-type: none;
@@ -34,9 +24,10 @@ main {
   display:flex;
 }
 .card-title{
-  color:white;
+	color:white;
   align-self:center;
-  position: absolute;
+	vertical-align: middle;
+	margin-left: auto;
   right:0;
 }
 .close-button{
@@ -90,5 +81,12 @@ footer{
 .field_with_errors {
   .form-control {
     color: red;
+  }
+}
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
   }
 }
