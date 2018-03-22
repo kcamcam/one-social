@@ -57,18 +57,19 @@ main {
 
 //Footer Shiz
 footer{
-  background-color: #eeeeee;
+  background-color: #eef0ee;
 }
 
 .footer-copyright{
-  background-color: #bdbdbd;
+  background-color: #bdc2bd;
 }
+
 .text-grey{
-  color:#757575;
+  color:#999999;
 }
 .text-grey a:hover {
   text-decoration: none;
-  color: #424242;
+  color: #7f7f7f;
 }
 
 // Common CSS
@@ -89,4 +90,46 @@ footer{
     color: red;
     margin: 0 0 30px 0;
   }
+}
+// Button and font material colors
+a{
+	color: #4caf50;
+}
+.text-primary{
+	color:#42a5f5;
+}
+.text-success{
+	color:#66bb6a;
+}
+.btn-dark{
+	background-color: #424242;
+	border-color: #424242;
+}
+.btn-dark:hover{
+	background-color: #212121;
+	border-color: #212121;
+}
+.btn-primary{
+	background-color: #42a5f5;
+	border-color: #42a5f5;
+}
+.btn-primary:hover{
+	background-color: #2196f3;
+	border-color: #2196f3;
+}
+.btn-success{
+	background-color: #66bb6a;
+	border-color: #66bb6a;
+}
+.btn-success:hover{
+	background-color: #4caf50;
+	border-color: #4caf50;
+}
+.btn-danger{
+	background-color: #ef5350;
+	border-color: #ef5350;
+}
+.btn-danger:hover{
+	background-color: #e53935;
+	border-color: #e53935;
 }
