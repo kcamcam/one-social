@@ -1,0 +1,116 @@
+/* line 1, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* line 6, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+main {
+  flex: 1 0 auto;
+}
+
+/* line 11, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.users {
+  list-style-type: none;
+}
+
+/* line 14, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.active .page-link {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+}
+
+/* line 18, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.page-link {
+  color: #343a40;
+}
+
+/* line 23, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.card-img-overlay {
+  display: flex;
+}
+
+/* line 26, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.card-title {
+  color: white;
+  align-self: center;
+  vertical-align: middle;
+  margin-left: auto;
+  right: 0;
+}
+
+/* line 33, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.close-button {
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.6;
+}
+
+/* line 47, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.edit-card-img {
+  opacity: 0.4;
+}
+
+/* line 50, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.edit-card-img:hover {
+  opacity: 1;
+}
+
+/* line 53, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.full-opacity {
+  opacity: 1;
+}
+
+/* line 59, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+footer {
+  background-color: #eeeeee;
+}
+
+/* line 63, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.footer-copyright {
+  background-color: #bdbdbd;
+}
+
+/* line 66, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.text-grey {
+  color: #757575;
+}
+
+/* line 69, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.text-grey a:hover {
+  text-decoration: none;
+  color: #424242;
+}
+
+/* line 75, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.card {
+  border: none;
+}
+
+/* line 78, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.edit-card-img:hover, .card-img-overlay:hover, .close-button:hover {
+  cursor: pointer;
+}
+
+/* line 82, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+.field_with_errors .form-control {
+  color: red;
+}
+
+/* line 86, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+#error_explanation {
+  color: red;
+}
+/* line 88, /Users/kevincamellini/Documents/Github/onesocial/app/assets/stylesheets/custom.scss */
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
