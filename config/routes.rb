@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'welcome#contact'
   get '/terms', to: 'welcome#terms'
   get '/privacy', to: 'welcome#privacy'
+  get '/google7bcbc4d2aa1e69ed', to: 'welcome#google7bcbc4d2aa1e69ed'
 
   get '/new', to: 'users#new'
   get '/users', to: 'users#index'
