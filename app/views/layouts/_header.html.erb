@@ -1,15 +1,18 @@
 <nav class="navbar navbar-expand-md bg-light px-3">
   <div class="nav-item">
-    <%= link_to raw("<strong>1Social</strong>.me"), root_path, class: "navbar-brand text-dark" %>
+    <%= link_to raw("<strong class=\"text-success\">1Social</strong>.me"), root_path, class: "navbar-brand text-dark" %>
   </div>
   <ul class="nav nav-pills ml-auto">
     <% if logged_in? %>
       <li class="nav-item">
-        <%= link_to "@#{current_user.name}",  "/#{current_user.name}", class: "nav-link text-light btn btn-sm btn-dark" %>
+        <%= link_to "@#{current_user.name}",  "/#{current_user.name}", class: "nav-link text-light btn btn-sm btn-primary" %>
       </li>
     <% else %>
-      <li class="nav-item">
-        <%= link_to "Log in", login_path, class: "nav-link text-light btn btn-sm btn-dark" %>
+      <li class="nav-item pr-2">
+				<%= link_to "Log in", login_path, class: "nav-link text-light btn btn-sm btn-dark" %>
+			</li>
+			<li class="nav-item">
+				<%= link_to "Sign up", new_user_path, class: "nav-link text-light btn btn-sm btn-success" %>
       </li>
     <% end %>
   </ul>
