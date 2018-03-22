@@ -38,8 +38,14 @@
 	<% end %>
 </div>
 
-<div class="row-fluid px-1 px-sm-4 pt-3 pb-4 pb-5">
-	<%= link_to "Example", "https://1social.com/kcamel", class: "btn btn-lg btn-dark mt-2" %>
-  <%= link_to "Search Users", users_path, class: "btn btn-lg btn-primary mt-2" %>
-	<%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-success mt-2" %>
+<div class="row px-1 px-sm-4 pt-3 pb-4 pb-5 mx-0">
+  <div class="col-sm-3 pl-sm-0 px-1">
+	   <%= link_to "Example", "https://1social.com/kcamel", class: "btn btn-lg btn-dark btn-block mt-2" %>
+  </div>
+  <div class="col-sm-3 px-1">
+    <%= link_to "Search Users", users_path, class: "btn btn-lg btn-primary btn-block mt-2" %>
+  </div>
+  <div class="col-sm-3 px-1">
+	   <%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-success btn-block mt-2" %>
+  </div>
 </div>
