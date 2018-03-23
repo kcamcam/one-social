@@ -14,10 +14,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 
+Rails.application.config.assets.precompile += %w( fontawesome-all.js )
 # These assets are already being precompiled in the asset pipeline ???
 # Rails.application.config.assets.precompile += %w( popper.min.js )
 # Rails.application.config.assets.precompile += %w( bootstrap.js )
-# Rails.application.config.assets.precompile += %w( fontawesome-all.js )
 # Rails.application.config.assets.precompile += %w( typed.js )
 # Rails.application.config.assets.precompile += %w( custom.js )
 # Rails.application.config.assets.precompile += %w( custom.css )
