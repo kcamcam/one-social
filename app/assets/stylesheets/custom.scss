@@ -72,7 +72,7 @@ footer{
   color: #7f7f7f;
 }
 
-// Common CSS
+// Common Shiz
 .card{
 	border:none;
 }
@@ -91,9 +91,25 @@ footer{
     margin: 0 0 30px 0;
   }
 }
+.btn-md, .nav-pills .btn, .btn-lg {
+  letter-spacing: 0.07em;
+}
+.btn {
+  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+.card-img-overlay, .card-img {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card-img-overlay:hover, .card-img:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 // Button and font material colors
 a{
 	color: #4caf50;
+}
+a:hover{
+	color: #43a047;
+  text-decoration: none;
 }
 .text-primary{
 	color:#42a5f5;

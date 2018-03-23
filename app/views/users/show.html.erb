@@ -1,8 +1,8 @@
 <% provide(:title, "@#{@user.name}") %>
 <div class="row pt-3 px-4 px-md-4 mx-md-5">
 	<div class="col-12 text-center p-2">
-  		<h1 class="p-2 pb-3 bg-light text-dark d-none d-sm-block" style="border-radius: 3px;">@<%= @user.name %></h1>
-		  <h3 class="p-2 pb-3 bg-light text-dark d-block d-sm-none" style="border-radius: 3px;">@<%= @user.name %></h3>
+  		<h1 class="p-2 text-dark d-none d-sm-block" style="border-radius: 3px;">@<%= @user.name %></h1>
+		  <h3 class="p-2 text-dark d-block d-sm-none" style="border-radius: 3px;">@<%= @user.name %></h3>
 	</div>
 </div>
 
@@ -110,8 +110,8 @@
 		</div>
 		<!-- ./Card + add new/edit -->
 		<div class="col-12 text-right pt-3 px-2">
-			<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-light" %>
-			<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-light" %>
+			<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-md btn-light" %>
+			<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-danger" %>
 		</div>
 	<% end %>
 	<!-- ./if current user -->

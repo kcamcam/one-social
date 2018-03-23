@@ -8,35 +8,48 @@
 
 <!-- Search Field -->
 <div class="row-fluid p-2">
-  <%= form_tag users_path, method: :get do %>
-  <div class="input-group mb-2" style="width:100%;">
-    <div class="input-group-prepend">
-      <div class="input-group-text">@</div>
-    </div>
-      <%= text_field_tag 'term', params[:term], placeholder: "Enter a username", class: "form-control" %>
-      <div class="input-group-append">
-        <%= submit_tag "Search", class: "btn btn-sm btn-success" %>
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+    <%= form_tag users_path, method: :get do %>
+    <div class="input-group mb-2" style="width:100%;">
+      <div class="input-group-prepend">
+        <div class="input-group-text">@</div>
       </div>
+        <%= text_field_tag 'term', params[:term], placeholder: "Enter a username", class: "form-control" %>
+        <div class="input-group-append">
+          <%= button_tag(type: "submit", class: "btn btn-sm btn-success") do %>
+              <i class="far fa-search"></i>
+          <% end %>
+          <%# submit_tag "Search", class: "btn btn-sm btn-success" %>
+        </div>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
 <!-- ./Search Field -->
 
 
 <!-- Paginated content -->
 <div class="row px-3">
-    <% @users.each do |user| %>
-      <div class="list-inline">
-        <li class="list-inline-item">
-        <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-light m-2"%>
-        </li>
-      </div>
-      <%# If admin offer delete option %>
-      <%# if !current_user.nil? && current_user.admin? && !current_user?(user) %>
-        <%# <span> | </span>%>
-        <%# link_to "delete", user, method: :delete,data: { confirm: "You sure?" } %>
-      <%# end %>
-    <% end %>
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+    <!-- <div class="list-inline"> -->
+    <div class="row">
+      <% @users.each do |user| %>
+
+        <div class="col-6 col-sm-4 col-xl-3">
+          <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-sm btn-primary btn-block mt-2"%>
+        </div>
+        <!-- <li class="list-inline-item"> -->
+          <%# link_to "@#{user.name}", "/#{user.name}", class: "btn btn-light m-1"%>
+        <!-- </li> -->
+        <%# If admin offer delete option %>
+        <%# if !current_user.nil? && current_user.admin? && !current_user?(user) %>
+          <%# <span> | </span>%>
+          <%# link_to "delete", user, method: :delete,data: { confirm: "You sure?" } %>
+        <%# end %>
+      <% end %>
+    </div>
+    <!-- </div> -->
+  </div>
 </div>
 <!-- ./Paginated content -->
 
@@ -51,5 +64,5 @@
 <!-- ./Pagination links -->
 
 <div class="row-fluid px-2 pt-3 pb-5 text-center">
-  <%= link_to "All Users", users_path, class: "btn btn-lg btn-light" %>
+  <%= link_to "All Users", users_path, class: "btn btn-md btn-light" %>
 </div>

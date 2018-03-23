@@ -1,51 +1,71 @@
-<div class="row-fluid px-1 px-sm-4 pt-3 text-dark">
-  <h2 class="d-none d-sm-block"><span class="typed"></span></h2>
-  <h4 class="d-block d-sm-none"><span class="typed-xs"></span></h4>
-  <script type="text/javascript">
-  // Typed.js from https://mattboldt.com/demos/typed-js/
-    var options = {strings: [
-                    "Follow me on: Instagram @user_name",
-                    "Follow me on: Youtube /user_name",
-                    "Follow me on: Facebook @user_name",
-                    "Follow me on: <span class=\"text-success\">Everywhere</span> <strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
-                  ],
-                  smartBackspace: true,
-                  typeSpeed: 40,
-                  onComplete: function(){
-  	                 $(".card-img-welcome").css('filter','grayscale(0)');
-                     $(".card-img-welcome").css('opacity','0.8');
-                  }
-                };
-    var typed = new Typed('.typed', options );
-    var typed = new Typed('.typed-xs', options);
-  </script>
-  <p class="h6 d-block d-sm-none">The missing social media link</p>
-  <p class="h3 d-none d-sm-block">The missing social media link</p>
-  <p class="h6 d-block d-sm-none">Aggregate all of your social media into one place</p>
-  <p class="h3 d-none d-sm-block">Aggregate all of your social media into one place</p>
+<div class="row-fluid pt-3 text-dark">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-1">
+    <h2 class="d-none d-lg-block"><span class="typed-lg"></span></h4>
+    <h3 class="d-none d-sm-block d-md-block d-lg-none"><span class="typed-md"></span></h2>
+    <h5 class="d-block d-sm-none"><span class="typed-xs"></span></h5>
+    <script type="text/javascript">
+    // Typed.js from https://mattboldt.com/demos/typed-js/
+      var options = {strings: [
+                      "Follow me on:<br />Instagram&nbsp;@user_name",
+                      "Follow me on:<br />Youtube&nbsp;/user_name",
+                      "Follow me on:<br />Facebook&nbsp;@user_name",
+                      "Follow me on:<br /><span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
+                    ],
+                    smartBackspace: true,
+                    typeSpeed: 40,
+                    onComplete: function(){
+    	                 $(".card-img-welcome").css('filter','grayscale(0)');
+                       $(".card-img-welcome").css('opacity','0.8');
+                    }
+                  };
+      var optionslg = {strings: [
+                      "Follow me on: Instagram&nbsp;@user_name",
+                      "Follow me on: Youtube&nbsp;/user_name",
+                      "Follow me on: Facebook&nbsp;@user_name",
+                      "Follow me on: <span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
+                    ],
+                    smartBackspace: true,
+                    typeSpeed: 40,
+                    onComplete: function(){
+    	                 $(".card-img-welcome").css('filter','grayscale(0)');
+                       $(".card-img-welcome").css('opacity','0.8');
+                    }
+                  };
+      var typedmd = new Typed('.typed-md', options );
+      var typedxs = new Typed('.typed-xs', options);
+      var typedlg = new Typed('.typed-lg', optionslg);
+    </script>
+  </div>
 </div>
 
-<div class="row px-1 pl-sm-4 pr-sm-5 mx-0 ml-sm-2 mr-sm-5 pt-2">
-	<% @socialarray.each do |sa| %>
-		<div class="col-3 col-sm-2 col-md-1 p-1">
-			<%= content_tag( :div,"",
-								class: "card addsocial" )%>
-				<%= image_tag("#{sa}.png",
-									alt: "#{sa.capitalize}",
-									class: "card-img card-img-welcome",
-                  style: "-webkit-filter: grayscale(1);filter: grayscale(1); opacity: 0.4;transition-duration: 1300ms;")%>
-		</div>
-	<% end %>
+<div class="row-fluid" align="justify">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+    <div class="row">
+    	<% @socialarray.each do |sa| %>
+    		<div class="col-3 col-sm-2 col-md-2 p-1">
+    			<%= content_tag( :div,"",
+    								class: "card addsocial" )%>
+    				<%= image_tag("#{sa}.png",
+    									alt: "#{sa.capitalize}",
+    									class: "card-img card-img-welcome",
+                      style: "-webkit-filter: grayscale(1);filter: grayscale(1); opacity: 0.4;")%>
+    		</div>
+    	<% end %>
+    </div>
+  </div>
 </div>
 
-<div class="row px-1 px-sm-4 pt-3 pb-4 pb-5 mx-0">
-  <div class="col-sm-3 pl-sm-0 px-1">
-	   <%= link_to "Example", "https://1social.me/kcamel", class: "btn btn-lg btn-dark btn-block mt-2" %>
-  </div>
-  <div class="col-sm-3 px-1">
-    <%= link_to "Search Users", users_path, class: "btn btn-lg btn-primary btn-block mt-2" %>
-  </div>
-  <div class="col-sm-3 px-1">
-	   <%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-success btn-block mt-2" %>
+<div class="row-fluid pb-5">
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+    <div class="row" align="justify">
+      <p class="h6 d-block d-sm-none">The missing social media link. All of your social media, now in one place.</p>
+      <p class="h3 d-none d-sm-block">The missing social media link. All of your social media, now in one place.</p>
+      <div class="col-sm-3 p-0 pr-2">
+        <%= link_to "Search", users_path, class: "btn btn-md btn-primary btn-block mt-2" %>
+      </div>
+      <div class="col-sm-3 p-0 pr-2">
+    	   <%= link_to "Sign up", new_user_path, class: "btn btn-md btn-success btn-block mt-2" %>
+      </div>
+    </div>
   </div>
 </div>
