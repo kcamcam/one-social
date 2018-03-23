@@ -53,6 +53,8 @@
 					<% @link = "http\://#{sa}.me/#{@social[sa]}" %>
 				<% elsif sa == "origin" || sa == "discord"%>
 					<% @link = "javascript:window.location.reload(false)" %>
+				<% elsif sa == "tumblr"%>
+					<% @link = "http\://#{@social[sa]}.#{sa}.com/" %>
 				<% else %>
 					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 				<% end %>

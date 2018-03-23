@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @user = User.find_by_name(params[:id]) #find by username instead
     @social = @user.social_medium
-    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
   end
 
   def new
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to user_path(@user.name)
