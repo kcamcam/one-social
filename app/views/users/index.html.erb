@@ -8,8 +8,8 @@
 
 <!-- Search Field -->
 <div class="row-fluid p-2">
-  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-    <%= form_tag users_path, method: :get do %>
+  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-0 px-sm-1">
+    <%= form_tag users_path, method: :get, autocomplete: "off" do %>
     <div class="input-group mb-2" style="width:100%;">
       <div class="input-group-prepend">
         <div class="input-group-text">@</div>
@@ -35,7 +35,7 @@
     <div class="row">
       <% @users.each do |user| %>
 
-        <div class="col-6 col-sm-4 col-xl-3">
+        <div class="col-6 col-sm-4 col-xl-3 px-1 px-sm-2">
           <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-sm btn-primary btn-block mt-2"%>
         </div>
         <!-- <li class="list-inline-item"> -->

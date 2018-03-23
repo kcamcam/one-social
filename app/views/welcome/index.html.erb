@@ -65,9 +65,11 @@
       <div class="col-sm-3 pl-1 pr-1 py-0">
         <%= link_to "Search", users_path, class: "btn btn-md btn-primary btn-block mt-2" %>
       </div>
-      <div class="col-sm-3 p-0 pl-1 pr-1">
-    	   <%= link_to "Sign up", new_user_path, class: "btn btn-md btn-success btn-block mt-2" %>
-      </div>
+      <% if !logged_in? %>
+        <div class="col-sm-3 p-0 pl-1 pr-1">
+      	   <%= link_to "Sign up", new_user_path, class: "btn btn-md btn-success btn-block mt-2" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
