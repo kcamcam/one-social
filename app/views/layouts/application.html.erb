@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ⚡>
   <head>
     <meta charset="utf-8">
     <title><%= yield(:title) %></title>
     <!-- Default Meta Data -->
     <meta name="Author" content="Kevin Camellini"/>
-    <meta name="Description" content="All of your social media in one place. Consolidates all of your social media links into one place, making it easy to find and be found."/>
+    <meta name="Description" content="The only social media link you'll ever need to share. All of your social media, now all in one place."/>
     <meta name="Keywords" content="kevin camellini,kevin,camellini,kcamel,social media,onesocial,1social,social,media,facebook,twitter,instragram,share,link"/>
     <meta name="Robots" content="all">
     <meta name="Distribution" content="Global">
     <meta name="Submission" content="https://1social.me">
     <meta name="Expires" content="Never">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no">
   	<!-- Open Graph -->
   	<meta property="og:locale" content="en_CA">
   	<meta property="fb:app_id" content="159407924773432">
   	<meta property="og:type" content="website">
   	<meta property="og:title" content="1Social.me">
-  	<meta property="og:description" content="All of your social media in one place. Consolidates all of your social media links into one place, making it easy to find and be found.">
+  	<meta property="og:description" content="The only social media link you'll ever need to share. All of your social media, now all in one place.">
   	<meta property="og:url" content="https://1social.me">
   	<meta property="og:site_name" content="1Social.me">
   	<meta property="og:image" content="<%= image_path('opengraph.png') %>">
@@ -26,12 +27,13 @@
     <meta name="twitter:site" content="@kevcamcam">
     <meta name="twitter:creator" content="@kevcamcam">
   	<meta name="twitter:image" content="<%= image_path('opengraph.png') %>">
-    <meta name="twitter:description" content="All of your social media in one place. Consolidates all of your social media links into one place, making it easy to find and be found.">
-    <!-- CRF Meta Tags -->
+    <meta name="twitter:description" content="The only social media link you'll ever need to share. All of your social media, now all in one place.">
+    <!-- CSRF Token -->
     <%= csrf_meta_tags %>
+    <!-- CSS -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- JS -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
     <!--  Navbar -->
