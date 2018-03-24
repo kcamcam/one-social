@@ -26,9 +26,9 @@ class SocialMediumController < ApplicationController
     @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
-      render 'edit'
+      redirect_to user_path(@user.name)
     else
-      flash[:error] = "Invalid username, either its already taken or its invalid. Only letters, numbers,@, dashes and underscores are permitted (abc,123,@,-,_)."
+      flash[:danger] = "Invalid username, either its already taken or the wrong format. Only letters, numbers, @, -, and _ are permitted."
       render 'edit'
       # redirect_to user_path(@user.name)
     end

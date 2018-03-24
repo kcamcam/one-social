@@ -1,22 +1,22 @@
 <% provide(:title, 'All users') %>
 <!-- Title -->
 <div class="row-fluid px-1 px-sm-4 pt-3 text-dark text-center">
-  <h2 class="text-dark d-none d-sm-block"><strong>1social</strong> users</h1>
-  <h3 class="text-dark d-block d-sm-none"><strong>1social</strong> users</h2>
+  <h3 class="text-dark d-none d-sm-block"><strong>1social</strong> users</h3>
+  <h4 class="text-dark d-block d-sm-none"><strong>1social</strong> users</h4>
 </div>
 <!-- ./Title -->
 
 <!-- Search Field -->
-<div class="row-fluid p-2">
+<div class="row-fluid p-1 p-sm-2">
   <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-0 px-sm-1">
     <%= form_tag users_path, method: :get, autocomplete: "off" do %>
     <div class="input-group mb-2" style="width:100%;">
       <div class="input-group-prepend">
-        <div class="input-group-text">@</div>
+        <div class="input-group-text bg-dark text-light" style="font-weight: lighter;">&commat;</div>
       </div>
         <%= text_field_tag 'term', params[:term], placeholder: "Enter a username", class: "form-control" %>
         <div class="input-group-append">
-          <%= button_tag(type: "submit", class: "btn btn-sm btn-success") do %>
+          <%= button_tag(type: "submit", class: "btn btn-sm btn-dark") do %>
               <i class="far fa-search"></i>
           <% end %>
           <%# submit_tag "Search", class: "btn btn-sm btn-success" %>
@@ -36,7 +36,7 @@
       <% @users.each do |user| %>
 
         <div class="col-6 col-sm-4 col-xl-3 px-1 px-sm-2">
-          <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-sm btn-primary btn-block mt-2"%>
+          <%= link_to "@#{user.name}", "/#{user.name}", class: "btn btn-sm btn-success btn-block mt-2 text-truncate"%>
         </div>
         <!-- <li class="list-inline-item"> -->
           <%# link_to "@#{user.name}", "/#{user.name}", class: "btn btn-light m-1"%>

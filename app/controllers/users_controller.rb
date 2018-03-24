@@ -26,9 +26,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+		social = SocialMedium.new # create a blank instance of Social Media for this user
+		@user.social_medium = social # create the relation
     if @user.save
-      social = SocialMedium.new # create a blank instance of Social Media for this user
-      @user.social_medium = social # create the relation
       log_in @user
       flash[:success] = "Welcome to oneSocial!"
       redirect_to user_path(@user.name)
@@ -44,7 +44,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to user_path(@user.name)
@@ -55,8 +54,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.require(:user).permit(:name, :email, :password,:password_confirmation,:social_medium)
     end
 
     # Before filters
