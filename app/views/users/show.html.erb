@@ -1,8 +1,18 @@
 <% provide(:title, "@#{@user.name}") %>
-<div class="row pt-3 px-4 px-md-4 mx-md-5">
+<div class="row px-4 px-md-4 mx-md-5">
 	<div class="col-12 text-center p-2">
-  		<h2 class="p-2 text-dark d-none d-sm-block mb-0">@<%= @user.name %></h2>
-		  <h3 class="p-2 text-dark d-block d-sm-none mb-0">@<%= @user.name %></h3>
+  		<h2 class="p-2 text-dark d-none d-sm-block mb-0">
+				<a class="sharelink" onclick="copy(<%= "\"#{@user.name}\",\"lg\"" %>);">
+					@<%= @user.name %>&nbsp;<i class="fal fa-share-square align-baseline" style="font-size: 0.6em;"></i>
+					<span class="tooltiptext" id="tooltiptext-lg">Link copied</span>
+				</a>
+			</h2>
+		  <h3 class="p-2 text-dark d-block d-sm-none mb-0">
+				<a class="sharelink" onclick="copy(<%= "\"#{@user.name}\",\"sm\"" %>);">
+					@<%= @user.name %>&nbsp;<i class="fal fa-share-square align-baseline" style="font-size: 0.6em;"></i>
+					<span class="tooltiptext" id="tooltiptext-sm">Link copied</span>
+				</a>
+			</h3>
 	</div>
 </div>
 

@@ -21,6 +21,68 @@ main {
 }
 
 // Show Profile Page
+.sharelink {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.sharelink #tooltiptext-sm {
+    visibility: hidden;
+    width: auto;
+    font-size: 1rem;
+    background-color: #66bb6a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    /* Position the tooltip text*/
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -25%;
+}
+.sharelink #tooltiptext-lg {
+    visibility: hidden;
+    min-width: 7rem;
+    font-size: 1rem;
+    background-color: #66bb6a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    /* Position the tooltip text*/
+    position: absolute;
+    z-index: 1;
+    left: 105%;
+}
+// Show the arrow pointing from the tooltip
+.sharelink #tooltiptext-sm::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #66bb6a transparent;
+}
+.sharelink #tooltiptext-lg::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #66bb6a transparent transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.sharelink:focus .tooltiptext {
+    // visibility: visible;
+}
+
 .card-img-overlay{
   display:flex;
 }
@@ -84,7 +146,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .btn{
 .card{
 	border:none;
 }
-.edit-card-img:hover, .card-img-overlay:hover, .close-button:hover{
+.edit-card-img:hover, .card-img-overlay:hover, .close-button:hover, .sharelink:hover{
   cursor: pointer;
 }
 .field_with_errors {
