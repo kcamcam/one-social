@@ -1,53 +1,60 @@
 <% provide(:title, "@#{@user.name}") %>
-<div class="row-fluid">
-	<div class="col-12 text-center pt-3 px-2">
-    <h2 class="text-dark d-none d-sm-block">Add/Edit Social Media</h2>
-		<h3 class="text-dark d-block d-sm-none">Add/Edit Social Media</h3>
+<div class="row">
+	<div class="col-12 text-center pt-3 p-2">
+    <h2 class="text-dark d-none d-sm-block">Add/Edit Your Social Media</h2>
+		<h3 class="text-dark d-block d-sm-none">Add/Edit Your Social Media</h3>
   </div>
   <%= render 'shared/error_messages' %>
 </div>
 
 <!-- The input field and submit/back buttons -->
-<div class="row-fluid p-2">
-	<%= form_for(@social) do |f| %>
-		<div class="input-group mb-2" style="width:100%;">
-			<div class="input-group-prepend">
-			  <div class="input-group-text">@</div>
+<div class="row pb-2 px-4 px-md-5 mx-md-5">
+	<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-0 px-sm-1">
+		<%= form_for(@social) do |f| %>
+			<div class="input-group mb-2" style="width:100%;">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">@</div>
+				</div>
+		  	<%= f.text_field 	:id, id: "social-radio",
+			  						value: "",
+										class: "form-control",
+			  						placeholder: "select a social media platform below to update or modify it"
+				%>
+				<div class="input-group-append">
+					<%# link_to "Back", "/#{current_user.name}", class: "btn btn-sm btn-success" %>
+					<%= f.submit "Save", class: "btn btn-sm btn-primary" %>
+			  </div>
 			</div>
-	  	<%= f.text_field 	:id, id: "social-radio",
-		  						value: "",
-									class: "form-control",
-		  						placeholder: "select a social media platform below to update or modify it"
-			%>
-			<div class="input-group-append">
-				<%# link_to "Back", "/#{current_user.name}", class: "btn btn-sm btn-success" %>
-				<%= f.submit "Save", class: "btn btn-sm btn-primary" %>
-		  </div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 </div>
 <!-- ./The input field and submit/back buttons -->
 
 <!-- The cards -->
-<div class="row px-3 pb-3 pt-1">
-	<% @socialarray.each do |sa| %>
-		<div class="col-3 col-sm-2 p-2">
-			<%= content_tag( :div,"",
-								class: "card addsocial" )%>
-				<%= image_tag("#{sa}.png",
-									alt: "#{sa.capitalize}",
-									class: "card-img edit-card-img",
-									onClick: "socialfn(\"#{sa}\",\"#{@social[sa]}\");" )%>
+<div class="row pb-3 px-4 px-md-5 mx-md-5">
+	<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-0 px-sm-1">
+		<div class="row px-2">
+			<% @socialarray.each do |sa| %>
+				<div class="col-3 col-sm-2 p-2">
+					<%= content_tag( :div,"",
+										class: "card addsocial" )%>
+						<%= image_tag("#{sa}.png",
+											alt: "#{sa.capitalize}",
+											class: "card-img edit-card-img",
+											onClick: "socialfn(\"#{sa}\",\"#{@social[sa]}\");" )%>
+				</div>
+			<% end %>
 		</div>
-	<% end %>
+	</div>
 </div>
 <!-- ./The cards -->
 
-<div class="row-fluid p-2 pb-5 text-right">
-	<div><small>*click the help button if you're having trouble finding your username</small></div>
-	<br />
-	<%= link_to "Help", help_path,class: "btn btn-light text-right" %>
-	<%= link_to "Back", "/#{current_user.name}", class: "btn btn-light text-right" %>
+<div class="row pb-5 px-4 px-md-5 mx-md-5 text-right">
+	<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-0 px-sm-1">
+		<div><small>*click the help button if you're having trouble finding your username</small></div>
+		<%= link_to "Help", help_path,class: "btn btn-light text-right" %>
+		<%= link_to "Back", "/#{current_user.name}", class: "btn btn-light text-right" %>
+	</div>
 </div>
 
 <script type="text/javascript">

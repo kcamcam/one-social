@@ -1,15 +1,15 @@
 <% provide(:title, "@#{@user.name}") %>
-<div class="row px-4 px-md-4 mx-md-5">
+<div class="row">
 	<div class="col-12 text-center p-2">
   		<h2 class="p-2 text-dark d-none d-sm-block mb-0">
 				<btn class="sharelink" onclick="showtooltip('lg');" data-clipboard-text="https://1social.me/<%=@user.name%>">
-					@<%= @user.name %>&nbsp;<i class="fal fa-share-square align-baseline" style="font-size: 0.6em;"></i>
+					@<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
 					<span class="tooltiptext" id="tooltiptext-lg">Link&nbsp;copied</span>
 				</btn>
 			</h2>
 		  <h3 class="p-2 text-dark d-block d-sm-none mb-0">
 				<btn class="sharelink" onclick="showtooltip('sm');" data-clipboard-text="https://1social.me/<%=@user.name%>">
-					@<%= @user.name %>&nbsp;<i class="fal fa-share-square align-baseline" style="font-size: 0.6em;"></i>
+					@<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
 					<span class="tooltiptext" id="tooltiptext-sm">Link&nbsp;copied</span>
 				</btn>
 			</h3>
@@ -18,7 +18,7 @@
 
 <%= render 'shared/error_messages' %>
 
-<div class="row pb-5 px-4 px-md-4 mx-md-5">
+<div class="row pb-5 px-4 px-md-5 mx-md-5">
 	<!-- each social media do -->
 	<% @socialarray.each do |sa| %>
 	  <!-- if not empty -->
@@ -72,11 +72,11 @@
 				<%= link_to @link, target: :_blank do %>
 					<div class="card-img-overlay p-1 pr-2">
 						<% if @social[sa].length > 12  %>
-		        	<h5 class="card-title pr-4"><%= sa.capitalize %></h5>
+		        	<h5 class="card-title pr-2"><%= sa.capitalize %></h5>
 						<% elsif  sa == "medium" %>
-							<h5 class="card-title pr-4"><%= @social[sa] %></h5>
+							<h5 class="card-title pr-2"><%= @social[sa] %></h5>
 						<% else %>
-							<h5 class="card-title pr-4">@<%= @social[sa] %></h5>
+							<h5 class="card-title pr-2">@<%= @social[sa] %></h5>
 						<% end %>
 
 						<!-- if current user -->
