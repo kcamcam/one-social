@@ -31,45 +31,37 @@ main {
 /* Tooltip text */
 .sharelink #tooltiptext-sm, .sharelink #tooltiptext-lg  {
     visibility: hidden;
-    min-width: 7rem;
-    font-size: 0.9rem;
+    width: auto;
     background-color: #66bb6a;
     color: #fff;
     text-align: center;
-    padding: 8px 8px 8px 8px;
-    border-radius: 4px;
+    border-radius: 3px;
     /* Position the tooltip text*/
     position: absolute;
     z-index: 1;
 }
-.sharelink #tooltiptext-sm {
-  top: 100%;
-  left: 50%;
-  margin-left: -50%;
+.sharelink #tooltiptext-lg{
+  font-size: 0.9rem;
+  padding: 8px 15px 8px 15px;
 }
-.sharelink #tooltiptext-lg {
-    left: 105%;
+.sharelink #tooltiptext-sm{
+  font-size: 0.75rem;
+  padding: 8px 8px 8px 8px;
+}
+.sharelink #tooltiptext-sm,.sharelink #tooltiptext-lg {
+  left: 105%;
+  top: 5%;
 }
 // Show the arrow pointing from the tooltip
-.sharelink #tooltiptext-sm::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #66bb6a transparent;
-}
-.sharelink #tooltiptext-lg::after {
-    content: "";
-    position: absolute;
-    top: 40%;
-    right: 100%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent #66bb6a transparent transparent;
+.sharelink #tooltiptext-sm::after, .sharelink #tooltiptext-lg::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #66bb6a transparent transparent;
 }
 
 .card-img-overlay{

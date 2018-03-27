@@ -27,5 +27,5 @@ function socialfn(platform,anchor){
 function showtooltip(size) {
 	var tooltip = document.getElementById("tooltiptext-"+size+"");
 	tooltip.style.visibility = "visible";
-	setTimeout(function(){ tooltip.style.visibility = 'hidden'}, 1500);
+	setTimeout(function(){ tooltip.style.visibility = 'hidden'}, 1750);
 }
