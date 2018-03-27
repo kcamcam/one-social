@@ -25,36 +25,29 @@ main {
     position: relative;
     display: inline-block;
 }
-
-/* Tooltip text */
-.sharelink #tooltiptext-sm {
-    visibility: hidden;
-    width: auto;
-    font-size: 1rem;
-    background-color: #66bb6a;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    border-radius: 4px;
-    /* Position the tooltip text*/
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -25%;
+.fa-share-square {
+  color: #4caf50;
 }
-.sharelink #tooltiptext-lg {
+/* Tooltip text */
+.sharelink #tooltiptext-sm, .sharelink #tooltiptext-lg  {
     visibility: hidden;
     min-width: 7rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: #66bb6a;
     color: #fff;
     text-align: center;
-    padding: 10px 10px 10px 10px;
+    padding: 8px 8px 8px 8px;
     border-radius: 4px;
     /* Position the tooltip text*/
     position: absolute;
     z-index: 1;
+}
+.sharelink #tooltiptext-sm {
+  top: 100%;
+  left: 50%;
+  margin-left: -50%;
+}
+.sharelink #tooltiptext-lg {
     left: 105%;
 }
 // Show the arrow pointing from the tooltip
@@ -77,10 +70,6 @@ main {
     border-width: 5px;
     border-style: solid;
     border-color: transparent #66bb6a transparent transparent;
-}
-/* Show the tooltip text when you mouse over the tooltip container */
-.sharelink:focus .tooltiptext {
-    // visibility: visible;
 }
 
 .card-img-overlay{

@@ -23,22 +23,9 @@ function socialfn(platform,anchor){
 		$(".input-group-text").text("@");
 }
 
-/* Copy result to Clipboard */
-function copy(username,size) {
-  // Create a "hidden" input
-  var aux = document.createElement("input");
-  // Assign it the value of the specified element
-  aux.setAttribute("value", "https://1social.me/"+username);
-  // Append it to the body
-  document.body.appendChild(aux);
-  // Highlight its content
-  aux.select();
-  // Copy the highlighted text
-  document.execCommand("copy");
-  // Remove it from the body
-  document.body.removeChild(aux);
-	//disply the tooltip
+/* Show the tooltip */
+function showtooltip(size) {
 	var tooltip = document.getElementById("tooltiptext-"+size+"");
 	tooltip.style.visibility = "visible";
-	setTimeout(function(){ tooltip.style.visibility = 'hidden'}, 3000);
+	setTimeout(function(){ tooltip.style.visibility = 'hidden'}, 1500);
 }
