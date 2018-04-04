@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-
+  # Display All
   def index
     # @users = User.paginate(page: params[:page])
     @users = if params[:term]
@@ -12,19 +12,20 @@ class UsersController < ApplicationController
     end
 
   end
-
+  # Display User
   def show
     # @user = User.find(params[:id])
-    @user = User.find_by_name(params[:id]) #find by username instead
+    @user = User.find_by_name(params[:id].downcase) #find by username instead
     @social = @user.social_medium
     @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
   end
 
+  # Create new user
   def new
     @user = User.new
   end
-
   def create
+    user_params[:name].downcase!
     @user = User.new(user_params)
 		social = SocialMedium.new # create a blank instance of Social Media for this user
 		@user.social_medium = social # create the relation
@@ -37,16 +38,17 @@ class UsersController < ApplicationController
     end
   end
 
+  # Edit user
   def edit
     @user = User.find(params[:id])
   end
-
   def update
+    user_params[:name].downcase!
     @user = User.find(params[:id])
     @social = @user.social_medium
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
-      redirect_to user_path(@user.name)
+      redirect_to user_path(@user.name.downcase)
     else
       render 'edit'
     end
