@@ -17,13 +17,13 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","steam","origin","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","bitcoin","ethereum","paypal"]
   end
 
   def update
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","steam","origin","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","bitcoin","ethereum","paypal"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
       redirect_to user_path(@user.name)
