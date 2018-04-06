@@ -17,13 +17,13 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","steam","origin","discord","bitcoin","ethereum","paypal"]
   end
 
   def update
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
-    @socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","steam","origin","discord","bitcoin","ethereum","paypal"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
       redirect_to user_path(@user.name)
@@ -36,7 +36,7 @@ class SocialMediumController < ApplicationController
 
   private
     def social_params
-      params.require(:social_medium).permit(:twitter,:instagram,:youtube,:facebook,:googleplus,:pinterest,:snapchat,:flickr,:messenger,:medium,:reddit,:hackernews,:github,:keybase,:devpost,:devto,:angel,:linkedin,:steam,:origin,:twitch,:discord,:bitcoin,:ethereum,:paypal,:tumblr)
+      params.require(:social_medium).permit(:twitter,:instagram,:youtube,:facebook,:googleplus,:pinterest,:snapchat,:flickr,:wire,:messenger,:medium,:reddit,:hackernews,:github,:keybase,:devpost,:devto,:angel,:linkedin,:steam,:origin,:twitch,:discord,:bitcoin,:ethereum,:paypal,:tumblr)
     end
     # Before filters
 
