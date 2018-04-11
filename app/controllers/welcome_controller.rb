@@ -9,6 +9,6 @@ class WelcomeController < ApplicationController
   end
 
   def index
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","twitch","steam","origin","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","spotify","soundcloud","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","website","paypal","bitcoin","ethereum"]
   end
 end

@@ -1,8 +1,8 @@
 <% provide(:title, "@#{@user.name}") %>
 <div class="row">
 	<div class="col-12 text-center pt-3 p-2">
-    <h2 class="text-dark d-none d-sm-block">Add/Edit Your Social Media</h2>
-		<h3 class="text-dark d-block d-sm-none">Add/Edit Your Social Media</h3>
+    <h2 class="text-dark d-none d-sm-block">Add | Edit Your Links</h2>
+		<h3 class="text-dark d-block d-sm-none">Add | Edit Your Links</h3>
   </div>
   <%= render 'shared/error_messages' %>
 </div>
@@ -18,7 +18,7 @@
 		  	<%= f.text_field 	:id, id: "social-radio",
 			  						value: "",
 										class: "form-control",
-			  						placeholder: "select a social media platform below to update or modify it"
+			  						placeholder: "select a social media platform below"
 				%>
 				<div class="input-group-append">
 					<%# link_to "Back", "/#{current_user.name}", class: "btn btn-sm btn-success" %>

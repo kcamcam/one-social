@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @user = User.find_by_name(params[:id].downcase) #find by username instead
     @social = @user.social_medium
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","wire","messenger","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","bitcoin","ethereum","paypal"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","spotify","soundcloud","pinterest","flickr","tumblr","medium","reddit","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","paypal","bitcoin","ethereum","email","website"]
   end
 
   # Create new user

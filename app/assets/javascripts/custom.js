@@ -6,9 +6,15 @@ function socialfn(platform,anchor){
 	// change the placeholder of the input field on click
 	if (anchor != "")
 		socialradio.value = anchor+"";
-	else if (platform == "medium"){
+	else if (platform == "website"){
 		socialradio.value = "";
-		socialradio.placeholder = "Enter a new  medium username (include the @)";
+		socialradio.placeholder = "Enter a new website (include the http://)";
+	}else if (platform == "medium"){
+		socialradio.value = "";
+		socialradio.placeholder = "Enter a new medium username (include the @)";
+	}else if (platform == "email"){
+		socialradio.value = "";
+		socialradio.placeholder = "Enter a new email";
 	}else{
 		socialradio.value = "";
 		socialradio.placeholder = "Enter a new "+platform+" username";

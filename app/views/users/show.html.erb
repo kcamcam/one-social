@@ -63,19 +63,33 @@
 					<% @link = "http\://#{sa}.me/#{@social[sa]}" %>
 				<% elsif sa == "origin" || sa == "discord"%>
 					<% @link = "javascript:window.location.reload(false)" %>
-				<% elsif sa == "wire"%>
+				<% elsif sa == "wire" %>
 					<% @link = "https\://#{sa}.com/download/" %>
-				<% elsif sa == "tumblr"%>
+				<% elsif sa == "tumblr" %>
 					<% @link = "http\://#{@social[sa]}.#{sa}.com/" %>
+				<% elsif sa == "spotify" %>
+					<% @link = "https\://open.#{sa}.com/user/#{@social[sa]}" %>
+				<% elsif sa == "soundcloud" %>
+					<% @link = "https\://#{sa}.com/#{@social[sa]}" %>
+				<% elsif sa == "website"%>
+					<% @link = "#{@social[sa]}" %>
+				<% elsif sa == "email"%>
+					<% @link = "mailto:#{@social[sa]}" %>
 				<% else %>
 					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 				<% end %>
 				<!-- ./linkdo create link around card -->
 				<%= link_to @link, target: :_blank do %>
 					<div class="card-img-overlay p-1 pr-2">
-						<% if @social[sa].length > 12  %>
-		        	<h5 class="card-title pr-2"><%= sa.capitalize %></h5>
-						<% elsif  sa == "medium" %>
+						<% if @social[sa].length > 12 && (sa == "website" || sa == "paypal" || sa == "ethereum" || sa == "keybase" || sa == "dev" || sa == "flickr" || sa == "snapchat") %>
+							<h5 class="card-title pr-2 text-dark"><%= sa.capitalize %></h5>
+						<% elsif @social[sa].length <= 12 && (sa == "website" || sa == "email" || sa == "ethereum") %>
+							<h5 class="card-title pr-2 text-dark"><%= @social[sa] %></h5>
+						<% elsif @social[sa].length <= 12 && (sa == "paypal" || sa == "keybase" || sa == "dev" || sa == "flickr" || sa == "snapchat") %>
+							<h5 class="card-title pr-2 text-dark">@<%= @social[sa] %></h5>
+						<% elsif @social[sa].length > 12  %>
+							<h5 class="card-title pr-2"><%= sa.capitalize %></h5>
+						<% elsif sa == "medium" %>
 							<h5 class="card-title pr-2"><%= @social[sa] %></h5>
 						<% else %>
 							<h5 class="card-title pr-2">@<%= @social[sa] %></h5>
@@ -117,7 +131,7 @@
 				<%= image_tag("plus-lg.png", class: "card-img") %>
 				<%= link_to edit_social_medium_url  do %>
 					<div class="card-img-overlay p-1 pr-2">
-						<h5 class="card-title pr-4">Add/Edit</h5>
+						<h5 class="card-title pr-4">Add | Edit</h5>
 					</div>
 				<% end %>
 			</div>
