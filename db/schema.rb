@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411033342) do
+ActiveRecord::Schema.define(version: 20180704041403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20180411033342) do
     t.string "email"
     t.string "soundcloud"
     t.string "spotify"
+    t.string "xbox"
+    t.string "telegram"
     t.index ["id"], name: "index_social_media_on_id"
     t.index ["user_id"], name: "index_social_media_on_user_id", unique: true
   end

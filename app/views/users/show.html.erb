@@ -75,6 +75,10 @@
 					<% @link = "#{@social[sa]}" %>
 				<% elsif sa == "email"%>
 					<% @link = "mailto:#{@social[sa]}" %>
+				<% elsif sa == "xbox"%>
+					<% @link = "https\://account.#{sa}.com/Profile?Gamertag=#{@social[sa]}" %>
+				<% elsif sa == "telegram"%>
+					<% @link = "https\://web.#{sa}.org/\#/im?p=@#{@social[sa]}" %>
 				<% else %>
 					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 				<% end %>

@@ -1,7 +1,7 @@
 class SocialMedium < ApplicationRecord
 	belongs_to :user
 	validates_uniqueness_of :user_id
-	@socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","wire","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal","soundcloud","spotify"]
+	@socialarray = ["twitter","instagram","youtube","facebook","googleplus","pinterest","snapchat","flickr","tumblr","wire","messenger","medium","reddit","hackernews","github","keybase","devpost","devto","angel","linkedin","steam","origin","twitch","discord","bitcoin","ethereum","paypal","soundcloud","spotify","xbox","telegram"]
 	VALID_NAME_REGEX = /\A[a-z0-9\-_@#.]+\z/i #letters, numbers, -, _, @, #, .
 	VALID_WEBSITE_REGEX = /https?:\/\/[\S]+/i
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

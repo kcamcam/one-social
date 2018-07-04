@@ -17,14 +17,14 @@ class SocialMediumController < ApplicationController
   def edit
     @user = User.find_by_name(params[:id])
     @social = @user.social_medium
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","soundcloud","spotify","pinterest","flickr","tumblr","reddit","medium","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","paypal","bitcoin","ethereum","email","website"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","telegram","soundcloud","spotify","pinterest","flickr","tumblr","reddit","medium","hackernews","github","keybase","devto","devpost","angel","twitch","origin","xbox","steam","discord","paypal","bitcoin","ethereum","email","website"]
   end
 
   def update
     @user = User.find_by_id(params[:id])
     @social = @user.social_medium
     # Leave this heres, its need for the rror messages
-    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","soundcloud","spotify","pinterest","flickr","tumblr","reddit","medium","hackernews","github","keybase","devto","devpost","angel","twitch","origin","steam","discord","paypal","bitcoin","ethereum","email","website"]
+    @socialarray = ["instagram","twitter","youtube","facebook","googleplus","linkedin","snapchat","messenger","wire","telegram","soundcloud","spotify","pinterest","flickr","tumblr","reddit","medium","hackernews","github","keybase","devto","devpost","angel","twitch","origin","xbox","steam","discord","paypal","bitcoin","ethereum","email","website"]
     if @social.update_attributes(social_params)
       flash[:success] = "Updated"
       redirect_to user_path(@user.name)
@@ -37,7 +37,7 @@ class SocialMediumController < ApplicationController
 
   private
     def social_params
-      params.require(:social_medium).permit(:twitter,:instagram,:youtube,:facebook,:googleplus,:pinterest,:snapchat,:flickr,:wire,:messenger,:medium,:reddit,:hackernews,:github,:keybase,:devpost,:devto,:angel,:linkedin,:steam,:origin,:twitch,:discord,:bitcoin,:ethereum,:paypal,:tumblr,:email,:website,:spotify,:soundcloud)
+      params.require(:social_medium).permit(:twitter,:instagram,:youtube,:facebook,:googleplus,:pinterest,:snapchat,:flickr,:wire,:messenger,:medium,:reddit,:hackernews,:github,:keybase,:devpost,:devto,:angel,:linkedin,:steam,:origin,:twitch,:discord,:bitcoin,:ethereum,:paypal,:tumblr,:email,:website,:spotify,:soundcloud,:xbox,:telegram)
     end
     # Before filters
 
