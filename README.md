@@ -4,7 +4,7 @@ Firstly, it's one of my first Ruby on Rails projects, so it might be a little ro
 ![1Social IMG](https://i.imgur.com/xTt2uYo.png)  
 ## What can It Do?  
 - 1social links will open in the desired app (if it's installed). Some supported apps that support this feature are: Youtube, Instagram, Facebook, Snapchat, Twitter, etc...  
-<img src="https://s1.gifyu.com/images/1Social-Links.md.gif" alt="1Social-Links.gif" border="0" width="250px" />  
+<img src="public/1SocialLinks.gif" alt="1Social-Links.gif" border="0" width="250px" />  
 
 - Each user gets their own customized link, like a business card. For example mine is **kcamel**  which means my link is [1social.me/**kcamel**](https://1social.me/kcamel)
 
