@@ -1,21 +1,27 @@
-<nav class="navbar navbar-expand-md bg-light px-3">
+<nav class="navbar navbar-expand-md bg-light pl-3 pr-2">
   <div class="nav-item">
-    <%= link_to raw("<strong class=\"text-success\" style=\"font-weight:485;\">1Social</strong>.me"), root_path, class: "navbar-brand text-dark" %>
+    <%= link_to raw("<strong class=\"text-success\" style=\"font-weight:400;\">1Social</strong>.me"), root_path, class: "navbar-brand text-dark" %>
   </div>
   <ul class="nav nav-pills ml-auto">
+    <li class="nav-item pr-2 d-none d-sm-block">
+      <%= link_to "View Users", users_path, class: "nav-link text-light btn btn-sm btn-dark" %>
+    </li>
+    <li class="nav-item pr-2 d-block d-sm-none">
+        <%= link_to "Users", users_path, class: "nav-link text-light btn btn-sm btn-dark" %>
+      </li>
     <% if logged_in? %>
-      <li class="nav-item">
-        <%= link_to "@#{current_user.name}",  "/#{current_user.name}", class: "nav-link text-light btn btn-sm btn-success text-truncate", style: "font-weight: 100;" %>
+      <li class="nav-item d-none d-sm-block">
+        <%= link_to "My Profile",  "/#{current_user.name}", class: "nav-link text-light btn btn-sm btn-success" %>
       </li>
+      <li class="nav-item d-block d-sm-none">
+          <%= link_to "Profile",  "/#{current_user.name}", class: "nav-link text-light btn btn-sm btn-success" %>
+        </li>
     <% else %>
-      <li class="nav-item pr-2 d-block d-sm-none">
-        <%= link_to "Log in", login_path, class: "nav-link text-light btn btn-sm btn-success" %>
+      <li class="nav-item d-block d-sm-none">
+        <%= link_to "Register", login_path, class: "nav-link text-light btn btn-sm btn-success" %>
       </li>
-      <li class="nav-item pr-2 d-none d-sm-block">
-				<%= link_to "Log in", login_path, class: "nav-link text-light btn btn-sm btn-dark" %>
-			</li>
 			<li class="nav-item d-none d-sm-block">
-				<%= link_to "Sign up", new_user_path, class: "nav-link text-light btn btn-sm btn-success" %>
+				<%= link_to "Register/Login", new_user_path, class: "nav-link text-light btn btn-sm btn-success" %>
       </li>
     <% end %>
   </ul>

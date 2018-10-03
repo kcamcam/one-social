@@ -1,152 +1,188 @@
-<% provide(:title, "@#{@user.name}") %>
+<% provide(:title, "#{@user.name}") %>
 <div class="row">
-	<div class="col-12 text-center p-2">
-  		<h2 class="p-2 text-dark d-none d-sm-block mb-0">
-				<btn class="sharelink" onclick="showtooltip('lg');" data-clipboard-text="https://1social.me/<%=@user.name%>">
-					@<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
-					<span class="tooltiptext" id="tooltiptext-lg">Link&nbsp;copied</span>
-				</btn>
-			</h2>
-		  <h3 class="p-2 text-dark d-block d-sm-none mb-0">
-				<btn class="sharelink" onclick="showtooltip('sm');" data-clipboard-text="https://1social.me/<%=@user.name%>">
-					@<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
-					<span class="tooltiptext" id="tooltiptext-sm">Link&nbsp;copied</span>
-				</btn>
-			</h3>
+	<div class="col-12 text-center pt-4 px-2">
+		<!-- larger screens-->
+		<a class="sharelink h2 px-2 text-dark d-none d-sm-block mb-0 text-truncate" onclick="showtooltip();" data-clipboard-text="https://1social.me/<%=@user.name%>">
+			<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
+		</a>
+		
+		<!-- larger screens-->
+		<a class="sharelink h3 px-2 text-dark d-block d-sm-none mb-0 text-truncate" onclick="showtooltip();" data-clipboard-text="https://1social.me/<%=@user.name%>">
+			<%= @user.name %>&nbsp;<i class="fal fa-link align-baseline"></i>
+		</a>
+		<small class="tooltiptext text-grey" id="tooltiptext">link&nbsp;copied</small>
 	</div>
 </div>
 
 <%= render 'shared/error_messages' %>
 
-<div class="row pb-5 px-4 px-md-5 mx-md-5">
-	<!-- each social media do -->
-	<% @socialarray.each do |sa| %>
-	  <!-- if not empty -->
-	  <% if @user.social_medium[sa] != "" && @user.social_medium[sa] != nil %>
-		<!-- Card -->
-		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-2">
-	    <div class="card text-white">
-	      <%= image_tag("#{sa}-lg.png",
-		                alt: "#{sa}",
-		                class: "card-img")%>
-				<% if sa == "steam" %>
-					<% @link = "http\://steamcommunity.com/profiles/#{@social[sa]}" %>
-				<% elsif sa == "ethereum" %>
-					<% @link = "http\://www.etherchain.org/account/#{@social[sa]}" %>
-				<% elsif sa == "bitcoin" %>
-					<% @link = "http\://blockchain.info/address/#{@social[sa]}" %>
-				<% elsif sa == "pinterest" %>
-					<% @link = "http\://pinterest.ca/#{@social[sa]}" %>
-				<% elsif sa == "googleplus" %>
-					<% @link = "http\://plus.google.com/#{@social[sa]}" %>
-				<% elsif sa == "pinterest" %>
-					<% @link = "http\://#{sa}.ca/#{@social[sa]}" %>
-				<% elsif sa == "snapchat" %>
-					<% @link = "http\://#{sa}.com/add/#{@social[sa]}" %>
-				<% elsif sa == "messenger" %>
-					<% @link = "http\://m.me/#{@social[sa]}" %>
-				<% elsif sa == "hackernews" %>
-					<% @link = "http\://news.ycombinator.com/user?id=#{@social[sa]}" %>
-				<% elsif sa == "keybase" %>
-					<% @link = "http\://#{sa}.io/#{@social[sa]}" %>
-				<% elsif sa == "devto" %>
-					<% @link = "http\://dev.to/#{@social[sa]}" %>
-				<% elsif sa == "angel" %>
-					<% @link = "http\://#{sa}.co/#{@social[sa]}" %>
-				<% elsif sa == "linkedin" %>
-					<% @link = "http\://#{sa}.com/in/#{@social[sa]}" %>
-				<% elsif sa == "twitch" %>
-					<% @link = "http\://#{sa}.tv/#{@social[sa]}" %>
-				<% elsif sa == "reddit" %>
-					<% @link = "http\://#{sa}.com/user/#{@social[sa]}" %>
-				<% elsif sa == "paypal" %>
-					<% @link = "http\://#{sa}.me/#{@social[sa]}" %>
-				<% elsif sa == "origin" || sa == "discord"%>
-					<% @link = "javascript:window.location.reload(false)" %>
-				<% elsif sa == "wire" %>
-					<% @link = "https\://#{sa}.com/download/" %>
-				<% elsif sa == "tumblr" %>
-					<% @link = "http\://#{@social[sa]}.#{sa}.com/" %>
-				<% elsif sa == "spotify" %>
-					<% @link = "https\://open.#{sa}.com/user/#{@social[sa]}" %>
-				<% elsif sa == "soundcloud" %>
-					<% @link = "https\://#{sa}.com/#{@social[sa]}" %>
-				<% elsif sa == "website"%>
-					<% @link = "#{@social[sa]}" %>
-				<% elsif sa == "email"%>
-					<% @link = "mailto:#{@social[sa]}" %>
-				<% elsif sa == "xbox"%>
-					<% @link = "https\://account.#{sa}.com/Profile?Gamertag=#{@social[sa]}" %>
-				<% elsif sa == "telegram"%>
-					<% @link = "https\://web.#{sa}.org/\#/im?p=@#{@social[sa]}" %>
-				<% else %>
-					<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
-				<% end %>
-				<!-- ./linkdo create link around card -->
-				<%= link_to @link, target: :_blank do %>
-					<div class="card-img-overlay p-1 pr-2">
-						<% if @social[sa].length > 12 && (sa == "website" || sa == "paypal" || sa == "ethereum" || sa == "keybase" || sa == "dev" || sa == "flickr" || sa == "snapchat") %>
-							<h5 class="card-title pr-2 text-dark"><%= sa.capitalize %></h5>
-						<% elsif @social[sa].length <= 12 && (sa == "website" || sa == "email" || sa == "ethereum") %>
-							<h5 class="card-title pr-2 text-dark"><%= @social[sa] %></h5>
-						<% elsif @social[sa].length <= 12 && (sa == "paypal" || sa == "keybase" || sa == "dev" || sa == "flickr" || sa == "snapchat") %>
-							<h5 class="card-title pr-2 text-dark">@<%= @social[sa] %></h5>
-						<% elsif @social[sa].length > 12  %>
-							<h5 class="card-title pr-2"><%= sa.capitalize %></h5>
-						<% elsif sa == "medium" %>
-							<h5 class="card-title pr-2"><%= @social[sa] %></h5>
+<!-- Row -->
+<div class="row pb-5">
+	<!-- ./Nested Column - for padding -->
+	<div class="col-12 col-sm-10 offset-sm-1 col-xl-8 offset-xl-2 px-4">
+		<!-- ./Nested Row -->
+		<div class="row">
+			<!-- each social media do -->
+			<% @socialarray.each do |sa| %>
+			<!-- if not empty -->
+			<% if @user.social_medium[sa] != "" && @user.social_medium[sa] != nil %>
+				<!-- Card -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 p-1">
+					<div class="card text-white">
+						<%= image_tag("#{sa}-lg.png",
+								alt: "#{sa}",
+								class: "card-img")%>
+						<% if sa == "steam" %>
+							<% @link = "http\://steamcommunity.com/profiles/#{@social[sa]}" %>
+						<% elsif sa == "ethereum" %>
+							<% @link = "http\://www.etherchain.org/account/#{@social[sa]}" %>
+						<% elsif sa == "bitcoin" %>
+							<% @link = "http\://blockchain.info/address/#{@social[sa]}" %>
+						<% elsif sa == "pinterest" %>
+							<% @link = "http\://pinterest.ca/#{@social[sa]}" %>
+						<% elsif sa == "googleplus" %>
+							<% @link = "http\://plus.google.com/#{@social[sa]}" %>
+						<% elsif sa == "pinterest" %>
+							<% @link = "http\://#{sa}.ca/#{@social[sa]}" %>
+						<% elsif sa == "snapchat" %>
+							<% @link = "http\://#{sa}.com/add/#{@social[sa]}" %>
+						<% elsif sa == "messenger" %>
+							<% @link = "http\://m.me/#{@social[sa]}" %>
+						<% elsif sa == "hackernews" %>
+							<% @link = "http\://news.ycombinator.com/user?id=#{@social[sa]}" %>
+						<% elsif sa == "keybase" %>
+							<% @link = "http\://#{sa}.io/#{@social[sa]}" %>
+						<% elsif sa == "devto" %>
+							<% @link = "http\://dev.to/#{@social[sa]}" %>
+						<% elsif sa == "angel" %>
+							<% @link = "http\://#{sa}.co/#{@social[sa]}" %>
+						<% elsif sa == "linkedin" %>
+							<% @link = "http\://#{sa}.com/in/#{@social[sa]}" %>
+						<% elsif sa == "twitch" %>
+							<% @link = "http\://#{sa}.tv/#{@social[sa]}" %>
+						<% elsif sa == "reddit" %>
+							<% @link = "http\://#{sa}.com/user/#{@social[sa]}" %>
+						<% elsif sa == "paypal" %>
+							<% @link = "http\://#{sa}.me/#{@social[sa]}" %>
+						<% elsif sa == "origin" || sa == "discord" || sa == "wire" %>
+							<% @link = "javascript:void(0);" %>
+						<% elsif sa == "tumblr" %>
+							<% @link = "http\://#{@social[sa]}.#{sa}.com/" %>
+						<% elsif sa == "spotify" %>
+							<% @link = "https\://open.#{sa}.com/user/#{@social[sa]}" %>
+						<% elsif sa == "soundcloud" %>
+							<% @link = "https\://#{sa}.com/#{@social[sa]}" %>
+						<% elsif sa == "website"%>
+							<% @link = "#{@social[sa]}" %>
+						<% elsif sa == "email"%>
+							<% @link = "mailto:#{@social[sa]}" %>
+						<% elsif sa == "xbox"%>
+							<% @link = "https\://account.#{sa}.com/Profile?Gamertag=#{@social[sa]}" %>
+						<% elsif sa == "telegram"%>
+							<% @link = "https\://web.#{sa}.org/\#/im?p=@#{@social[sa]}" %>
 						<% else %>
-							<h5 class="card-title pr-2">@<%= @social[sa] %></h5>
+							<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 						<% end %>
+						<!-- if discord or origin (create blank links) -->
+						<% if sa == "discord" || sa == "origin" || sa == "wire"%>
+							<!-- ./ create link around the card -->
+							<%= link_to @link do %>
+							<div class="card-img-overlay p-1 pr-2">
+									<!--  >10 chars -->
+									<% if @social[sa].length > 9 %>	
+										<h6 class="card-title my-1 pr-2"><%= sa.capitalize %></h6>
+									<% else %>
+										<h6 class="card-title my-1 pr-2"><%= @social[sa] %></h6>
+									<% end %>
 
-						<!-- if current user -->
-						<% if current_user == @user %>
-							<!-- Form Delete button -->
-							<%= form_for (@social) do |f| %>
-								<%= f.text_field :"#{sa}", style: 'display: none;', value: "" %>
-								<%= f.submit raw("&times"), class: "close-button",
-											data: { confirm: 'Are you sure you want to delete',
-															'confirm-button-text': 'Yup',
-															'cancel-button-text': 'Nope',
-															'confirm-button-color': '#a5d6a7',
-															'cancel-button-color': '#e57373',
-															'sweet-alert-type': 'error',
-															text: "#{sa.capitalize}"}%>
+									<!-- if current user - display delete button -->
+									<% if current_user == @user %>
+										<!-- Form Delete button -->
+										<%= form_for (@social) do |f| %>
+											<%= f.text_field :"#{sa}", style: 'display: none;', value: "" %>
+											<%= f.submit raw("&times"), class: "close-button",
+														data: { confirm: 'Are you sure you want to delete',
+																		'confirm-button-text': 'Yup',
+																		'cancel-button-text': 'Nope',
+																		'confirm-button-color': '#a5d6a7',
+																		'cancel-button-color': '#e57373',
+																		'sweet-alert-type': 'error',
+																		text: "#{sa.capitalize}"}%>
+										<% end %>
+										<!-- ./Form Delete button -->
+									<% end %>
+									<!-- ./if current user -->
+								</div>
 							<% end %>
-							<!-- ./Form Delete button -->
-						<% end %>
-						<!-- ./if current user -->
-		      </div>
-				<% end %>
-				<!-- ./end link do  create link around card -->
-	    </div>
-	  </div>
-		<!-- ./Card -->
-	  <% end %>
-	  <!-- ./if not empty -->
-	<% end %>
-	<!-- ./each social media do -->
+							<!-- ./end link do  create link around card -->				
+						<!-- else not discord or origin (create links with new tab target) -->			
+						<% else %>
+							<!-- ./ create link around the card -->
+							<%= link_to @link, target: :_blank do %>
+								<div class="card-img-overlay p-1 pr-2">
+									<!--  >10 chars and requires dark text -->
+									<% if @social[sa].length > 9 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat") %>
+										<h6 class="card-title my-1 pr-2 text-dark"><%= sa.capitalize %></h6>
+									<!--  >10 chars -->
+									<% elsif @social[sa].length > 9 %>	
+										<h6 class="card-title my-1 pr-2"><%= sa.capitalize %></h6>
+									<!--  <=10 chars and requires dark text -->
+									<% elsif @social[sa].length <= 9 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat") %>	
+										<h6 class="card-title my-1 pr-2 text-dark"><%= @social[sa] %></h6>						
+									<% else %>
+										<h6 class="card-title my-1 pr-2"><%= @social[sa] %></h6>
+									<% end %>
 
-	<!-- if current user show delete-->
-	<% if current_user == @user %>
-		<!-- Card + add new/edit -->
-		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 p-2">
-			<div class="card text-white">
-				<%= image_tag("plus-lg.png", class: "card-img") %>
-				<%= link_to edit_social_medium_url  do %>
-					<div class="card-img-overlay p-1 pr-2">
-						<h5 class="card-title pr-4">Add | Edit</h5>
+									<!-- if current user - display delete button -->
+									<% if current_user == @user %>
+										<!-- Form Delete button -->
+										<%= form_for (@social) do |f| %>
+											<%= f.text_field :"#{sa}", style: 'display: none;', value: "" %>
+											<%= f.submit raw("&times"), class: "close-button",
+														data: { confirm: 'Are you sure you want to delete',
+																		'confirm-button-text': 'Yup',
+																		'cancel-button-text': 'Nope',
+																		'confirm-button-color': '#a5d6a7',
+																		'cancel-button-color': '#e57373',
+																		'sweet-alert-type': 'error',
+																		text: "#{sa.capitalize}"}%>
+										<% end %>
+										<!-- ./Form Delete button -->
+									<% end %>
+									<!-- ./if current user -->
+								</div>
+							<% end %>
+							<!-- ./end link do  create link around card -->
+						<% end %>
+						<!-- ./end if discord or origin (for blank links) -->
 					</div>
-				<% end %>
-			</div>
+					<!-- ./Card -->
+				</div>
+			<% end %>
+			<!-- ./if not empty -->
+			<% end %>
+			<!-- ./each social media do -->
+
+			<!-- if current user show delete-->
+			<% if current_user == @user %>
+				<!-- ./Card + add new/edit -->
+				<div class="col-12 text-right pt-2 px-1">
+					<!-- Larger screens -->
+					<%= link_to "Add / Edit Links", edit_social_medium_url, class: "btn btn-md btn-primary mb-1 d-none d-sm-inline-block" %>
+					<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-md btn-success mb-1 d-none d-sm-inline-block" %>
+					<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-danger mb-1 d-none d-sm-inline-block" %>
+
+					<!-- For smaller screens -->
+					<%= link_to "Add / Edit Links", edit_social_medium_url, class: "btn btn-md btn-primary mb-1 d-block d-sm-none" %>
+					<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-md btn-success mb-1 d-block d-sm-none" %>
+					<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-danger mb-1 d-block d-sm-none" %>
+				</div>
+			<% end %>
+			<!-- ./if current user -->
 		</div>
-		<!-- ./Card + add new/edit -->
-		<div class="col-12 text-right pt-3 px-2">
-			<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-md btn-light" %>
-			<%= link_to "Log out", logout_path, method: :delete, class: "btn btn-md btn-danger" %>
-		</div>
-	<% end %>
-	<!-- ./if current user -->
+		<!-- ./Nested Row -->
+	</div>
+	<!-- ./Nested Column - for padding -->
 </div>
 <!-- ./Row -->
-<script type="text/javascript">new ClipboardJS('.sharelink');</script>
+<script>new ClipboardJS('.sharelink');</script>

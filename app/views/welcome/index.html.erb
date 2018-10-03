@@ -1,49 +1,53 @@
 <% provide(:title, '1Social') %>
-<div class="row-fluid pt-3 text-dark">
-  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 px-1">
-    <h2 class="d-none d-lg-block"><span class="typed-lg"></span></h4>
-    <h3 class="d-none d-sm-block d-md-block d-lg-none"><span class="typed-md"></span></h2>
-    <h5 class="d-block d-sm-none"><span class="typed-xs"></span></h5>
-    <script type="text/javascript">
-    // Typed.js from https://mattboldt.com/demos/typed-js/
-      var options = {strings: [
-                      "Follow me on:<br />Instagram&nbsp;@user_name",
-                      "Follow me on:<br />Youtube&nbsp;/user_name",
-                      "Follow me on:<br />Twitter&nbsp;@user_name",
-                      "Follow me on:<br /><span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
-                    ],
-                    smartBackspace: true,
-                    typeSpeed: 40,
-                    onComplete: function(){
-    	                 $(".card-img-welcome").css('filter','grayscale(0)');
-                       $(".card-img-welcome").css('opacity','0.8');
-                    }
-                  };
-      var optionslg = {strings: [
-                      "Follow me on: Instagram&nbsp;@user_name",
-                      "Follow me on: Youtube&nbsp;/user_name",
-                      "Follow me on: Twitter&nbsp;@user_name",
-                      "Follow me on: <span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
-                    ],
-                    smartBackspace: true,
-                    typeSpeed: 40,
-                    onComplete: function(){
-    	                 $(".card-img-welcome").css('filter','grayscale(0)');
-                       $(".card-img-welcome").css('opacity','0.8');
-                    }
-                  };
-      var typedmd = new Typed('.typed-md', options );
-      var typedxs = new Typed('.typed-xs', options);
-      var typedlg = new Typed('.typed-lg', optionslg);
-    </script>
+<div class="row pt-3">
+    <div class="col-10 offset-1 col-lg-8 offset-lg-2 col-xl-4 offset-xl-4">
+    <div class="row">	
+      <div class="col-12 p-1">
+        <h2 class="d-none d-lg-block"><span class="typed-lg"></span></h2>
+        <h3 class="d-none d-sm-block d-md-block d-lg-none"><span class="typed-md"></span></h3>
+        <h5 class="d-block d-sm-none"><span class="typed-xs"></span></h5>
+        <script type="text/javascript">
+        // Typed.js from https://mattboldt.com/demos/typed-js/
+          var options = {strings: [
+                          "Follow me on:<br />Instagram&nbsp;@user_name",
+                          "Follow me on:<br />Youtube&nbsp;/user_name",
+                          "Follow me on:<br />Twitter&nbsp;@user_name",
+                          "Follow me on:<br /><span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
+                        ],
+                        smartBackspace: true,
+                        typeSpeed: 40,
+                        onComplete: function(){
+                          $(".card-img-welcome").css('filter','grayscale(0)');
+                          $(".card-img-welcome").css('opacity','0.8');
+                        }
+                      };
+          var optionslg = {strings: [
+                          "Follow me on: Instagram&nbsp;@user_name",
+                          "Follow me on: Youtube&nbsp;/user_name",
+                          "Follow me on: Twitter&nbsp;@user_name",
+                          "Follow me on: <span class=\"text-success\">Everywhere</span>&nbsp;<strong><a href=\"http\://1social.me/kcamel\" class=\"text-dark\">1social.me/user_name</strong></a>"
+                        ],
+                        smartBackspace: true,
+                        typeSpeed: 40,
+                        onComplete: function(){
+                          $(".card-img-welcome").css('filter','grayscale(0)');
+                          $(".card-img-welcome").css('opacity','0.8');
+                        }
+                      };
+          var typedmd = new Typed('.typed-md', options );
+          var typedxs = new Typed('.typed-xs', options);
+          var typedlg = new Typed('.typed-lg', optionslg);
+        </script>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="row-fluid" align="justify">
-  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-    <div class="row">
-    	<% @socialarray.each do |sa| %>
-    		<div class="col-3 col-sm-2 col-md-2 p-1">
+<!-- The cards -->
+<div class="row pb-2">
+    <div class="col-10 offset-1 col-lg-8 offset-lg-2 col-xl-4 offset-xl-4">
+        <div class="row">	
+          <% @socialarray.each do |sa| %>
+            <div class="col-2 p-lg-1" style="padding: 0.1em;">
     			<%= content_tag( :div,"",
     								class: "card addsocial" )%>
     				<%= image_tag("#{sa}.png",
@@ -56,21 +60,13 @@
   </div>
 </div>
 
-<div class="row-fluid pb-5">
-  <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-    <div class="row" align="justify">
+<div class="row pb-5">
+    <div class="col-10 offset-1 col-lg-8 offset-lg-2 col-xl-4 offset-xl-4">
+    <div class="row">	
       <div class="col-12 p-1">
         <p class="h6 d-block d-sm-none">The only social media link you'll ever need to share. All of your social media, now all in one place.</p>
         <p class="h4 d-none d-sm-block">The only social media link you'll ever need to share. All of your social media, now all in one place.</p>
       </div>
-      <div class="col-sm-3 pl-1 pr-1 py-0">
-        <%= link_to "Users", users_path, class: "btn btn-md btn-dark btn-block mt-2" %>
-      </div>
-      <% if !logged_in? %>
-        <div class="col-sm-3 p-0 pl-1 pr-1">
-      	   <%= link_to "Sign up", new_user_path, class: "btn btn-md btn-success btn-block mt-2" %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>

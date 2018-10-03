@@ -30,8 +30,8 @@ function socialfn(platform,anchor){
 }
 
 /* Show the tooltip */
-function showtooltip(size) {
-	var tooltip = document.getElementById("tooltiptext-"+size+"");
+function showtooltip() {
+	var tooltip = document.getElementById("tooltiptext");
 	tooltip.style.visibility = "visible";
 	setTimeout(function(){ tooltip.style.visibility = 'hidden'}, 1750);
 }
