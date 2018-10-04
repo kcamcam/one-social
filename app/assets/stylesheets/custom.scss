@@ -36,7 +36,7 @@ main {
     visibility: hidden;
 }
 
-
+/* card & card/imgs */
 .card-img-overlay{
   display:flex;
 }
@@ -58,6 +58,9 @@ main {
   color: #ffffff;
   text-shadow: 0 1px 0 #fff;
   opacity: 0.6;
+}
+.card-img{
+  opacity: 0.85;
 }
 
 // Edit Social Media Page
