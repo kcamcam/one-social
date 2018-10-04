@@ -80,6 +80,8 @@
 							<% @link = "https\://account.#{sa}.com/Profile?Gamertag=#{@social[sa]}" %>
 						<% elsif sa == "telegram"%>
 							<% @link = "https\://web.#{sa}.org/\#/im?p=@#{@social[sa]}" %>
+						<% elsif sa == "apple"%>
+							<% @link = "https\://itunes.apple.com/profile/#{@social[sa]}" %>
 						<% else %>
 							<% @link = "http\://www.#{sa}.com/#{@social[sa]}" %>
 						<% end %>
@@ -121,13 +123,13 @@
 							<%= link_to @link, target: :_blank do %>
 								<div class="card-img-overlay p-1 pr-2">
 									<!--  >10 chars and requires dark text -->
-									<% if @social[sa].length > 8 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat") %>
+									<% if @social[sa].length > 8 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat" || sa == "apple") %>
 										<h6 class="card-title my-1 pr-2 text-dark"><%= sa.capitalize %></h6>
 									<!--  >10 chars -->
 									<% elsif @social[sa].length > 8 %>	
 										<h6 class="card-title my-1 pr-2"><%= sa.capitalize %></h6>
 									<!--  <=10 chars and requires dark text -->
-									<% elsif @social[sa].length <= 8 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat") %>	
+									<% elsif @social[sa].length <= 8 && (sa == "website" || sa == "ethereum" || sa == "paypal" || sa == "devpost" || sa == "keybase" || sa == "flickr" || sa == "snapchat" || sa == "apple") %>	
 										<h6 class="card-title my-1 pr-2 text-dark"><%= @social[sa] %></h6>						
 									<% else %>
 										<h6 class="card-title my-1 pr-2"><%= @social[sa] %></h6>
