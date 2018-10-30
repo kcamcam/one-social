@@ -1,7 +1,22 @@
+### Getting started
+```bash
+$ git pull
+$ bundle install
+$ export DATABASE_URL=url-link-for-database-with-credentials
+$ rails s
+```
+or
+```bash
+$ git pull
+$ bundle install
+$ rails db:migrate
+$ rails s
+```
 ## What is 1Social?  
 [Link to 1Social](https://1Social.me)  
 Firstly, it's one of my first Ruby on Rails projects, so it might be a little rough around the edges. It's also a social media aggregator, kind of like a business card for all of your social media. All of your social media links get neatly arranged into a beautiful webpage. 
 ![1Social IMG](https://i.imgur.com/xTt2uYo.png)  
+
 ## What can It Do?  
 - 1social links will open in the desired app (if it's installed). Some supported apps that support this feature are: Youtube, Instagram, Facebook, Snapchat, Twitter, etc...  
 <img src="public/1SocialLinks.gif" alt="1Social-Links.gif" border="0" width="250px" />  
